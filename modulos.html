@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo em Módulos | Portal de Estudos Matemáticos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <div class="logo"><a href="index.html">TreineMath</a></div>
+            <nav class="main-nav">
+                <button class="hamburger" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html#home">Início</a></li>
+                    <li><a href="index.html#sobre">Sobre a Plataforma</a></li>
+                    <li><a href="index.html#funcionamento">Como Funciona</a></li>
+                    <li><a href="modulos.html">Conteúdo em Módulos</a></li>
+                    <li><a href="banco.html">Banco de Questões</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="content-modules" class="modules-page">
+            <div class="container">
+                <h2>Conteúdo em Módulos</h2>
+                <p class="intro-text">Explore nossos módulos de estudo, cada um com tópicos detalhados para aprofundar seu conhecimento em matemática olímpica.</p>
+
+                <div id="modules-list" class="module-grid">
+                    </div>
+
+                <div id="topics-list" class="topics-section" style="display: none;">
+                    <h3 id="current-module-title"></h3>
+                    <button id="back-to-modules" class="btn btn-outline-primary"><i class="fas fa-arrow-left"></i> Voltar aos Módulos</button>
+                    <ul class="topic-list">
+                        </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-columns">
+            <div class="footer-col">
+                <h3>TreineMath</h3>
+                <p>Transformando conhecimento em conquistas.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="index.html#home">Início</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#funcionamento">Como Funciona</a></li>
+                    <li><a href="modulos.html">Módulos</a></li>
+                    <li><a href="banco.html">Questões</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <p><i class="fas fa-envelope"></i> pedroh190508@gmail.com</p>
+            </div>
+            <div class="footer-col">
+                <h3>Siga-nos</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 TreineMath. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="modulos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

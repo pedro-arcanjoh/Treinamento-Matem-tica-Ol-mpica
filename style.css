@@ -1,0 +1,1286 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    --primary-color: #0053a0; /* Azul principal */
+    --secondary-color: #6c757d; /* Cinza para textos secundários */
+    --text-color: #333; /* Cor padrão do texto */
+    --light-bg: #f8f9fa; /* Fundo claro para seções alternadas */
+    --white: #fff; /* Branco */
+    --border-color: #dee2e6;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra padrão */
+    --dark-blue-bg: #2c3136; /* Azul escuro para rodapé e seções escuras */
+}
+
+/* --- Reset e Estilos Básicos --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--white);
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+h1 { font-size: 2.8em; }
+h2 { font-size: 2.2em; }
+h3 { font-size: 1.8em; }
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity .3s ease;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-outline {
+    background: none;
+    color: var(--white);
+    border: 2px solid var(--white);
+    margin-left: 15px;
+}
+
+.btn:hover {
+    opacity: .9;
+}
+
+/* --- Header + Navbar --- */
+header {
+    background: var(--white);
+    padding: 15px 0;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.main-nav .nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav .nav-list li {
+    margin-left: 20px;
+}
+
+.main-nav .nav-list a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color .3s;
+}
+.main-nav .nav-list a:hover {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 1.6em;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none; /* Escondido por padrão em telas maiores */
+}
+
+/* --- Seção Hero --- */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(img/testeFoto4.png) center/cover no-repeat;
+    color: var(--white);
+    padding: 120px 0;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: var(--white); /* Título hero em branco */
+}
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: var(--white);
+}
+
+/* --- Seções Gerais --- */
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+section:nth-of-type(even) { /* Aplica estilo alternado para seções */
+    background: var(--light-bg);
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+/* --- Seção Sobre a Plataforma (.about) --- */
+.about .about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.about .about-content img {
+    max-width: 45%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.about .about-content div {
+    flex: 1;
+}
+
+.about .about-content p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+.about .about-content p strong {
+    color: var(--primary-color);
+}
+
+/* --- Seção Como Funciona (.how-it-works) --- */
+.how-it-works .intro-text {
+    font-size: 1.2em;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--secondary-color);
+}
+
+.how-it-works .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.how-it-works .feature-item {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.how-it-works .feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.how-it-works .feature-item i {
+    font-size: 3.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+}
+
+.how-it-works .feature-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.how-it-works .feature-item ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.how-it-works .feature-item ul li {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+}
+
+.how-it-works .feature-item ul li i {
+    font-size: 1em;
+    margin-right: 8px;
+    color: var(--primary-color);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.how-it-works .cta-bottom {
+    margin-top: 50px; /* Espaço para o CTA abaixo do grid */
+}
+
+/* --- Conteúdo via JS (Módulos e Banco) --- */
+#modulos-container,
+#banco-container {
+    text-align: center; /* Centraliza o conteúdo dentro dos containers */
+}
+
+#modulos-container .modulo,
+#banco-container .conteudo {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    text-align: left; /* Alinha o texto dentro do card */
+}
+
+.modulo h3, .conteudo h3 {
+    text-align: center; /* Centraliza o título do módulo/conteúdo */
+}
+
+.modulo iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 315px;
+    margin: 10px auto; /* Centraliza o iframe */
+    display: block;
+    border: none;
+    border-radius: 5px;
+}
+
+.modulo .btn {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+button.ex-btn {
+    display: block;
+    width: 100%; /* Botões de resposta ocupam a largura total */
+    margin: 8px 0;
+    padding: 10px 12px;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left; /* Texto do botão alinhado à esquerda */
+}
+button.ex-btn:hover { background: #00438a; } /* Darken manual do primary-color */
+.resposta-text {
+    margin-top: 10px;
+    font-style: italic;
+    color: green;
+    font-weight: 600;
+}
+.resposta-text.incorrect {
+    color: red; /* Estilo para resposta incorreta */
+}
+
+/* --- Rodapé (Footer) --- */
+footer {
+    background: var(--dark-blue-bg);
+    color: #f0f0f0;
+    padding: 40px 0 20px;
+    text-align: left;
+}
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+.footer-col h3 {
+    margin-bottom: 15px;
+    color: var(--white);
+}
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a {
+    color: #f0f0f0;
+    transition: color .3s;
+}
+.footer-col ul li a:hover { color: var(--primary-color); }
+.footer-col p {
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+.footer-col p i {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+.social-icons a {
+    color: var(--white);
+    font-size: 1.5em;
+    margin-right: 15px;
+    transition: color .3s;
+}
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 15px;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+/* --- Responsividade --- */
+@media(max-width: 992px) {
+    .main-nav .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: var(--white);
+        position: absolute;
+        top: 65px; /* Ajuste para altura do header */
+        left: 0;
+        padding: 15px 0;
+        box-shadow: var(--shadow);
+        border-top: 1px solid var(--border-color);
+    }
+    .main-nav .nav-list.active { display: flex; }
+    .main-nav .nav-list li { margin: 10px 0; text-align: center; }
+    .hamburger { display: block; }
+
+    .hero h1 { font-size: 2.5em; }
+    .hero p { font-size: 1.1em; }
+    .btn-outline { margin-left: 0; margin-top: 10px; }
+
+    .about .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about .about-content img {
+        max-width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .how-it-works .feature-item {
+        text-align: center;
+    }
+    .how-it-works .feature-item ul {
+        text-align: left; /* Mantém a lista alinhada à esquerda */
+        display: inline-block; /* Para centralizar o UL dentro do item */
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr; /* Colunas empilhadas no rodapé */
+        text-align: center;
+    }
+    .footer-col ul {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.8em; }
+    h3 { font-size: 1.5em; }
+
+    section { padding: 60px 0; }
+
+    .hero { padding: 100px 0; }
+    .hero h1 { font-size: 2em; }
+    .hero p { font-size: 1em; }
+
+    .modulo iframe {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 { font-size: 1.8em; }
+    .hero p { font-size: 0.9em; }
+
+    .btn { padding: 10px 20px; font-size: 0.9em; }
+
+    .about .about-content img {
+        max-width: 100%;
+    }
+}
+
+/* --- Conteúdo em Módulos Page (modulos.html) --- */
+.modules-page {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.modules-page .intro-text {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    color: var(--secondary-color);
+}
+
+.module-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    text-align: center;
+}
+
+.module-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 180px; /* Garante altura mínima para cards */
+}
+
+.module-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.module-card i {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.module-card h3 {
+    font-size: 1.6em;
+    color: var(--primary-color);
+    margin-bottom: 0;
+}
+
+/* Seção de Tópicos (quando um módulo é clicado) */
+.topics-section {
+    text-align: left;
+    margin-top: 30px;
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.topics-section h3 {
+    font-size: 2em;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.topics-section .btn-outline-primary {
+    background: none;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-flex; /* Para alinhar ícone e texto */
+    align-items: center;
+}
+
+.topics-section .btn-outline-primary i {
+    margin-right: 8px;
+    font-size: 1em; /* Ajuste para o ícone do botão */
+    color: var(--primary-color);
+}
+
+.topics-section .btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+.topics-section .btn-outline-primary:hover i {
+    color: var(--white);
+}
+
+.topic-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2 ou 3 colunas para tópicos */
+    gap: 15px;
+}
+
+.topic-list li {
+    background-color: var(--light-bg);
+    padding: 15px 20px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.topic-list li:hover {
+    background-color: #e9ecef;
+    transform: translateY(-3px);
+}
+
+.topic-list li a {
+    font-size: 1.1em;
+    color: var(--text-color);
+    font-weight: 600;
+    display: block; /* Para o link ocupar todo o espaço do li */
+    text-decoration: none;
+}
+
+.topic-list li a:hover {
+    color: var(--primary-color);
+    text-decoration: none; /* Remove sublinhado ao passar o mouse */
+}
+
+/* Responsividade específica para a página de módulos */
+@media (max-width: 768px) {
+    .module-card {
+        padding: 25px;
+        min-height: 150px;
+    }
+    .module-card h3 {
+        font-size: 1.4em;
+    }
+    .topic-list {
+        grid-template-columns: 1fr; /* Tópicos empilhados em mobile */
+    }
+    .topics-section .btn-outline-primary {
+        width: 100%;
+        justify-content: center; /* Centraliza o botão */
+    }
+}
+
+/* --- Banco de Questões Page (banco.html) --- */
+.bank-page {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.bank-page .intro-text {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    color: var(--secondary-color);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.content-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 160px;
+}
+
+.content-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.content-card i {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.content-card h3 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-bottom: 0;
+}
+
+/* Seção de Lista de Questões (quando um conteúdo é clicado) */
+.questions-section {
+    text-align: left;
+    margin-top: 30px;
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.questions-section h3 {
+    font-size: 2em;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.questions-section .btn-outline-primary {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.questions-section .btn-outline-primary i {
+    margin-right: 8px;
+    font-size: 1em;
+    color: var(--primary-color);
+}
+.questions-section .btn-outline-primary:hover i {
+    color: var(--white);
+}
+
+.question-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Colunas para as questões */
+    gap: 15px;
+}
+
+.question-list li {
+    background-color: var(--light-bg);
+    padding: 15px 20px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    text-align: center;
+}
+
+.question-list li:hover {
+    background-color: #e9ecef;
+    transform: translateY(-3px);
+}
+
+.question-list li a {
+    font-size: 1.1em;
+    color: var(--text-color);
+    font-weight: 600;
+    display: block;
+    text-decoration: none;
+}
+
+.question-list li a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Seção de Detalhes da Questão */
+.question-details {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: left;
+    margin-top: 30px;
+}
+
+.question-details h3 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 25px;
+}
+
+.question-details .question-enunciado {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    background-color: var(--light-bg);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.alternatives-wrapper {
+    margin-bottom: 25px;
+}
+
+.alternative-item {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--white);
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+.alternative-item:hover {
+    background-color: #f0f0f0;
+    border-color: var(--primary-color);
+}
+
+.alternative-item.selected {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+/* Feedback de resposta */
+.feedback-area {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.answer-feedback {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.answer-feedback.correct {
+    color: green;
+}
+
+.answer-feedback.incorrect {
+    color: red;
+}
+
+.correct-alternative-info {
+    font-size: 1em;
+    color: var(--text-color);
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.question-details .btn-primary,
+.question-details .btn-outline-secondary {
+    margin-top: 15px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.question-details .btn-outline-secondary {
+    background: none;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.question-details .btn-outline-secondary:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.solution-area {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: var(--light-bg);
+    border-radius: 5px;
+    text-align: left;
+}
+
+.solution-area h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.solution-area .question-solution {
+    white-space: pre-wrap; /* Preserva quebras de linha no texto da solução */
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 15px;
+    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+}
+
+.navigation-buttons .btn {
+    flex-grow: 1; /* Faz os botões crescerem para preencher o espaço */
+    text-align: center;
+    display: inline-flex; /* Para ícone e texto */
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation-buttons .btn i {
+    margin-right: 8px;
+    margin-left: 8px; /* Para o ícone da direita */
+}
+
+.navigation-buttons .btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+.navigation-buttons .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    .question-list {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+    .questions-section .btn-outline-primary {
+        width: 100%;
+        justify-content: center;
+    }
+    .question-details h3 {
+        font-size: 1.8em;
+    }
+    .question-details .question-enunciado {
+        padding: 15px;
+        font-size: 1em;
+    }
+    .navigation-buttons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .question-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Lesson Page (aula-template.html) --- */
+.lesson-page {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.lesson-page #lesson-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: var(--primary-color);
+}
+
+.lesson-page .lesson-intro-text {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.lesson-navigation-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.lesson-navigation-top .btn {
+    padding: 10px 15px;
+    font-size: 0.95em;
+}
+
+/* Seções de Conteúdo (Video, Material, Exercícios) */
+.video-section, .material-section, .exercises-section {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+}
+
+.video-section h3, .material-section h3, .exercises-section h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 8px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.material-section p {
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.material-section .btn {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* Estilos para a lista de exercícios da aula */
+.exercises-section .exercise-intro-text {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+}
+
+.exercise-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.exercise-list-grid li {
+    background-color: var(--light-bg);
+    padding: 12px 18px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.exercise-list-grid li:hover {
+    background-color: #e9ecef;
+    transform: translateY(-3px);
+}
+
+.exercise-list-grid li a {
+    font-size: 1em;
+    color: var(--text-color);
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+}
+
+.exercise-list-grid li a:hover {
+    color: var(--primary-color);
+}
+
+
+/* Estilos para os detalhes do exercício (dentro da página de aula) */
+.exercise-details {
+    background-color: var(--light-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: left;
+    margin-top: 30px;
+}
+
+.exercise-details #exercise-number {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.exercise-details .exercise-enunciado {
+    font-size: 1.05em;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
+.exercise-details .alternatives-wrapper {
+    margin-bottom: 20px;
+}
+
+.exercise-details .alternative-item {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--white);
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    font-size: 0.95em;
+    color: var(--text-color);
+}
+
+.exercise-details .alternative-item:hover {
+    background-color: #f5f5f5;
+    border-color: var(--primary-color);
+}
+
+.exercise-details .alternative-item.selected {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.exercise-details .btn-primary,
+.exercise-details .btn-outline-secondary {
+    margin-top: 15px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 20px;
+}
+
+.exercise-details .btn-outline-secondary {
+    background: none;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.exercise-details .btn-outline-secondary:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.exercise-details .feedback-area {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.exercise-details .exercise-answer-feedback {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.exercise-details .exercise-answer-feedback.correct {
+    color: green;
+}
+
+.exercise-details .exercise-answer-feedback.incorrect {
+    color: red;
+}
+
+.exercise-details .exercise-correct-alternative-info {
+    font-size: 0.9em;
+    color: var(--text-color);
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.exercise-details .exercise-solution-area {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: var(--white);
+    border-radius: 5px;
+    text-align: left;
+    border: 1px dashed var(--secondary-color);
+}
+
+.exercise-details .exercise-solution-area h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.exercise-details .exercise-solution-area .exercise-solution {
+    white-space: pre-wrap; /* Preserva quebras de linha no texto da solução */
+    font-size: 0.95em;
+}
+
+.exercise-navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.exercise-navigation-buttons .btn {
+    flex-grow: 1;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    font-size: 0.9em;
+}
+
+.exercise-navigation-buttons .btn i {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+/* Responsividade para aulas */
+@media (max-width: 768px) {
+    .lesson-page #lesson-title {
+        font-size: 2em;
+    }
+    .lesson-page .lesson-intro-text {
+        font-size: 1em;
+    }
+    .video-section, .material-section, .exercises-section {
+        padding: 20px;
+    }
+    .video-section h3, .material-section h3, .exercises-section h3 {
+        font-size: 1.6em;
+    }
+    .lesson-navigation-top {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .lesson-navigation-top .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .exercise-list-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    .exercise-details {
+        padding: 20px;
+    }
+    .exercise-details #exercise-number {
+        font-size: 1.6em;
+    }
+    .exercise-details .btn-primary,
+    .exercise-details .btn-outline-secondary {
+        width: 100%;
+    }
+    .exercise-navigation-buttons {
+        flex-direction: column;
+    }
+    .exercise-navigation-buttons .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .exercise-list-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para o contêiner de login/cadastro */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Estilos para grupos de formulário (label + input) */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: calc(100% - 20px); /* Ajusta para padding */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilos para o botão de enviar */
+.login-container button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para o link de cadastro/login */
+.signup-link {
+    margin-top: 20px;
+    font-size: 15px;
+    color: #666;
+}
+
+.signup-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,266 @@
+{
+    "combinatoria": {
+        "name": "Combinatória",
+        "icon": "fas fa-puzzle-piece",
+        "questions": [
+            {
+                "enunciado": "Questão 1 de Combinatória: De quantas maneiras diferentes podemos organizar as letras da palavra 'AMOR'?",
+                "alternatives": ["12", "24", "36", "48", "60"],
+                "correctAnswerIndex": 1,
+                "solution": "A palavra AMOR tem 4 letras distintas. O número de maneiras de organizá-las é dado por 4! (4 fatorial).\n4! = 4 x 3 x 2 x 1 = 24."
+            },
+            {
+                "enunciado": "Questão 2 de Combinatória: Um time de futebol é formado por 11 jogadores. De quantas maneiras podemos escolher 2 capitães?",
+                "alternatives": ["22", "55", "110", "121", "242"],
+                "correctAnswerIndex": 1,
+                "solution": "Estamos escolhendo 2 jogadores de 11, onde a ordem não importa (ser capitão 1 e capitão 2 é o mesmo que ser capitão 2 e capitão 1). Isso é uma combinação simples C(11, 2).\nC(11, 2) = 11! / (2! * (11-2)!) = 11! / (2! * 9!) = (11 * 10) / (2 * 1) = 110 / 2 = 55."
+            },
+            {
+                "enunciado": "Questão 3 de Combinatória: Quantos números de 3 algarismos distintos podemos formar com os dígitos 1, 2, 3, 4, 5?",
+                "alternatives": ["60", "80", "100", "120", "150"],
+                "correctAnswerIndex": 3,
+                "solution": "Para o primeiro algarismo, temos 5 opções.\nPara o segundo algarismo, como deve ser distinto, temos 4 opções.\nPara o terceiro algarismo, temos 3 opções.\nTotal = 5 * 4 * 3 = 60."
+            },
+            {
+                "enunciado": "Questão 4 de Combinatória: Em um grupo de 7 pessoas, 3 devem ser selecionadas para formar uma comissão. De quantas maneiras isso pode ser feito?",
+                "alternatives": ["21", "35", "42", "70", "210"],
+                "correctAnswerIndex": 1,
+                "solution": "É uma combinação de 7 elementos tomados 3 a 3: C(7, 3) = 7! / (3! * 4!) = (7 * 6 * 5) / (3 * 2 * 1) = 35."
+            },
+            {
+                "enunciado": "Questão 5 de Combinatória: Quantos anagramas da palavra 'ARARA' existem?",
+                "alternatives": ["10", "20", "30", "40", "60"],
+                "correctAnswerIndex": 1,
+                "solution": "A palavra ARARA tem 5 letras, com repetições: A (3 vezes), R (2 vezes).\nNúmero de anagramas = 5! / (3! * 2!) = (5 * 4 * 3 * 2 * 1) / ((3 * 2 * 1) * (2 * 1)) = 120 / (6 * 2) = 120 / 12 = 10."
+            },
+            {
+                "enunciado": "Questão 6 de Combinatória: Uma moeda é lançada 5 vezes. Quantas sequências de resultados são possíveis?",
+                "alternatives": ["5", "10", "25", "32", "64"],
+                "correctAnswerIndex": 3,
+                "solution": "Para cada lançamento, há 2 resultados possíveis (cara ou coroa). Como são 5 lançamentos independentes, o total é 2^5 = 32."
+            },
+            {
+                "enunciado": "Questão 7 de Combinatória: De quantas maneiras 4 pessoas podem sentar em 4 cadeiras enfileiradas?",
+                "alternatives": ["4", "8", "16", "24", "120"],
+                "correctAnswerIndex": 3,
+                "solution": "É uma permutação de 4 elementos: 4! = 4 * 3 * 2 * 1 = 24."
+            },
+            {
+                "enunciado": "Questão 8 de Combinatória: Quantos subconjuntos de 2 elementos um conjunto com 5 elementos possui?",
+                "alternatives": ["5", "10", "15", "20", "25"],
+                "correctAnswerIndex": 1,
+                "solution": "É uma combinação de 5 elementos tomados 2 a 2: C(5, 2) = 5! / (2! * 3!) = (5 * 4) / (2 * 1) = 10."
+            },
+            {
+                "enunciado": "Questão 9 de Combinatória: Em uma festa, 10 amigos se cumprimentam. Cada um cumprimenta o outro uma única vez. Quantos cumprimentos houve no total?",
+                "alternatives": ["10", "20", "45", "90", "100"],
+                "correctAnswerIndex": 2,
+                "solution": "Isso é uma combinação de 10 elementos tomados 2 a 2: C(10, 2) = 10! / (2! * 8!) = (10 * 9) / (2 * 1) = 45."
+            },
+            {
+                "enunciado": "Questão 10 de Combinatória: De quantas maneiras diferentes 3 meninos e 3 meninas podem se sentar em fila, se meninos e meninas devem se alternar?",
+                "alternatives": ["12", "36", "72", "144", "720"],
+                "correctAnswerIndex": 2,
+                "solution": "Existem duas formas de alternar: M-F-M-F-M-F ou F-M-F-M-F-M.\nPara M-F-M-F-M-F: 3! para os meninos e 3! para as meninas. Total = 6 * 6 = 36.\nPara F-M-F-M-F-M: 3! para as meninas e 3! para os meninos. Total = 6 * 6 = 36.\nTotal geral = 36 + 36 = 72."
+            }
+        ]
+    },
+    "algebra": {
+        "name": "Álgebra",
+        "icon": "fas fa-square-root-alt",
+        "questions": [
+            {
+                "enunciado": "Questão 1 de Álgebra: Se x + y = 7 e xy = 10, qual é o valor de x² + y²?",
+                "alternatives": ["29", "39", "49", "59", "69"],
+                "correctAnswerIndex": 0,
+                "solution": "Sabemos que (x + y)² = x² + 2xy + y².\nEntão, x² + y² = (x + y)² - 2xy.\nSubstituindo os valores: x² + y² = (7)² - 2(10) = 49 - 20 = 29."
+            },
+            {
+                "enunciado": "Questão 2 de Álgebra: Qual é o valor de (x - 2)(x + 2) se x = 5?",
+                "alternatives": ["21", "23", "25", "27", "29"],
+                "correctAnswerIndex": 0,
+                "solution": "A expressão é um produto notável: (x - 2)(x + 2) = x² - 2² = x² - 4.\nSubstituindo x = 5: 5² - 4 = 25 - 4 = 21."
+            },
+            {
+                "enunciado": "Questão 3 de Álgebra: Resolva a equação 2x - 5 = 7.",
+                "alternatives": ["4", "5", "6", "7", "8"],
+                "correctAnswerIndex": 2,
+                "solution": "2x - 5 = 7\n2x = 7 + 5\n2x = 12\nx = 12 / 2\nx = 6."
+            },
+            {
+                "enunciado": "Questão 4 de Álgebra: Se f(x) = 3x - 1, qual é o valor de f(4)?",
+                "alternatives": ["10", "11", "12", "13", "14"],
+                "correctAnswerIndex": 2,
+                "solution": "Para encontrar f(4), substituímos x por 4 na função:\nf(4) = 3 * 4 - 1 = 12 - 1 = 11."
+            },
+            {
+                "enunciado": "Questão 5 de Álgebra: Qual é o conjunto solução da inequação 3x + 2 < 11?",
+                "alternatives": ["x < 3", "x > 3", "x < 4", "x > 4", "x = 3"],
+                "correctAnswerIndex": 0,
+                "solution": "3x + 2 < 11\n3x < 11 - 2\n3x < 9\nx < 9 / 3\nx < 3."
+            },
+            {
+                "enunciado": "Questão 6 de Álgebra: Se a função quadrática é f(x) = x² - 4x + 3, quais são as raízes?",
+                "alternatives": ["[1, 3]", "[2, 3]", "[1, 4]", "[0, 3]", "[-1, -3]"],
+                "correctAnswerIndex": 0,
+                "solution": "Podemos usar a fórmula de Bhaskara ou fatorar.\nPor fatoração: (x - 1)(x - 3) = 0. Então, x = 1 ou x = 3.\nAs raízes são 1 e 3."
+            },
+            {
+                "enunciado": "Questão 7 de Álgebra: Qual é o resultado de (a + b)³?",
+                "alternatives": ["a³ + b³", "a³ + 3ab + b³", "a³ + 3a²b + 3ab² + b³", "a³ + a²b + ab² + b³", "a³ + 2a²b + 2ab² + b³"],
+                "correctAnswerIndex": 2,
+                "solution": "É um produto notável conhecido: (a + b)³ = a³ + 3a²b + 3ab² + b³."
+            },
+            {
+                "enunciado": "Questão 8 de Álgebra: Resolva o sistema de equações:\nx + y = 5\nx - y = 1",
+                "alternatives": ["x=3, y=2", "x=2, y=3", "x=4, y=1", "x=1, y=4", "x=3, y=1"],
+                "correctAnswerIndex": 0,
+                "solution": "Somando as duas equações:\n(x + y) + (x - y) = 5 + 1\n2x = 6\nx = 3.\nSubstituindo x=3 na primeira equação: 3 + y = 5 => y = 2.\nSolução: x=3, y=2."
+            },
+            {
+                "enunciado": "Questão 9 de Álgebra: Qual o resto da divisão de um polinômio P(x) por (x - a)?",
+                "alternatives": ["P(0)", "P(1)", "P(a)", "P(-a)", "a"],
+                "correctAnswerIndex": 2,
+                "solution": "Pelo Teorema do Resto, o resto da divisão de um polinômio P(x) por (x - a) é P(a)."
+            },
+            {
+                "enunciado": "Questão 10 de Álgebra: Se uma sequência é definida por a(n) = 2n + 1, qual é o 5º termo?",
+                "alternatives": ["7", "9", "11", "13", "15"],
+                "correctAnswerIndex": 2,
+                "solution": "Para encontrar o 5º termo, substituímos n por 5:\na(5) = 2 * 5 + 1 = 10 + 1 = 11."
+            }
+        ]
+    },
+    "geometria": {
+        "name": "Geometria",
+        "icon": "fas fa-shapes",
+        "questions": [
+            {
+                "enunciado": "Questão 1 de Geometria: Um ângulo mede 60°. Qual é a medida do seu suplemento?",
+                "alternatives": ["30°", "90°", "120°", "150°", "180°"],
+                "correctAnswerIndex": 2,
+                "solution": "Ângulos suplementares somam 180°. Então, o suplemento de 60° é 180° - 60° = 120°."
+            },
+            {
+                "enunciado": "Questão 2 de Geometria: Em um triângulo retângulo, os catetos medem 3 cm e 4 cm. Qual a medida da hipotenusa?",
+                "alternatives": ["4 cm", "5 cm", "6 cm", "7 cm", "8 cm"],
+                "correctAnswerIndex": 1,
+                "solution": "Pelo Teorema de Pitágoras: hipotenusa² = cateto1² + cateto2².\nh² = 3² + 4² = 9 + 16 = 25.\nh = √25 = 5 cm."
+            },
+            {
+                "enunciado": "Questão 3 de Geometria: Qual é a área de um círculo com raio de 5 cm? (Use π ≈ 3.14)",
+                "alternatives": ["15.7 cm²", "31.4 cm²", "78.5 cm²", "100 cm²", "25 cm²"],
+                "correctAnswerIndex": 2,
+                "solution": "A área de um círculo é A = π * r².\nA = 3.14 * (5)² = 3.14 * 25 = 78.5 cm²."
+            },
+            {
+                "enunciado": "Questão 4 de Geometria: Um quadrado tem lado 6 cm. Qual é o seu perímetro?",
+                "alternatives": ["12 cm", "18 cm", "24 cm", "30 cm", "36 cm"],
+                "correctAnswerIndex": 2,
+                "solution": "O perímetro de um quadrado é 4 vezes o lado. Perímetro = 4 * 6 = 24 cm."
+            },
+            {
+                "enunciado": "Questão 5 de Geometria: Dois triângulos são semelhantes se eles têm:",
+                "alternatives": ["Lados iguais", "Ângulos correspondentes iguais", "Áreas iguais", "Perímetros iguais", "Um lado em comum"],
+                "correctAnswerIndex": 1,
+                "solution": "Dois triângulos são semelhantes se seus ângulos correspondentes são iguais e seus lados correspondentes são proporcionais."
+            },
+            {
+                "enunciado": "Questão 6 de Geometria: Qual é a soma dos ângulos internos de um hexágono?",
+                "alternatives": ["180°", "360°", "540°", "720°", "900°"],
+                "correctAnswerIndex": 3,
+                "solution": "A soma dos ângulos internos de um polígono de n lados é (n-2) * 180°.\nPara um hexágono (n=6): (6-2) * 180° = 4 * 180° = 720°."
+            },
+            {
+                "enunciado": "Questão 7 de Geometria: Uma reta transversal corta duas retas paralelas. Se um ângulo agudo formado é 40°, qual é o ângulo obtuso correspondente?",
+                "alternatives": ["40°", "50°", "100°", "140°", "160°"],
+                "correctAnswerIndex": 3,
+                "solution": "Ângulos correspondentes são iguais, mas um ângulo agudo e um obtuso na mesma intersecção são suplementares. Então, 180° - 40° = 140°."
+            },
+            {
+                "enunciado": "Questão 8 de Geometria: Em um triângulo isósceles, dois lados medem 5 cm e o ângulo entre eles é 60°. Qual a medida do terceiro lado?",
+                "alternatives": ["5 cm", "5√2 cm", "5√3 cm", "6 cm", "8 cm"],
+                "correctAnswerIndex": 0,
+                "solution": "Se um triângulo isósceles tem um ângulo de 60° entre os lados iguais, ele é, na verdade, um triângulo equilátero. Portanto, o terceiro lado também mede 5 cm."
+            },
+            {
+                "enunciado": "Questão 9 de Geometria: Se um círculo tem diâmetro de 10 cm, qual é o seu perímetro (circunferência)? (Use π ≈ 3.14)",
+                "alternatives": ["15.7 cm", "31.4 cm", "62.8 cm", "78.5 cm", "100 cm"],
+                "correctAnswerIndex": 1,
+                "solution": "O perímetro (circunferência) de um círculo é C = π * d, onde d é o diâmetro.\nC = 3.14 * 10 = 31.4 cm."
+            },
+            {
+                "enunciado": "Questão 10 de Geometria: Em um triângulo, a soma das medidas de dois lados é sempre ______ do que a medida do terceiro lado.",
+                "alternatives": ["igual", "maior", "menor", "o dobro", "a metade"],
+                "correctAnswerIndex": 1,
+                "solution": "A soma das medidas de dois lados de um triângulo é sempre MAIOR do que a medida do terceiro lado (condição de existência de um triângulo)."
+            }
+        ]
+    },
+    "aritmetica": {
+        "name": "Aritmética",
+        "icon": "fas fa-percent",
+        "questions": [
+            {
+                "enunciado": "Questão 1 de Aritmética: Qual é o próximo número na sequência: 2, 4, 6, 8, ...?",
+                "alternatives": ["9", "10", "11", "12", "13"],
+                "correctAnswerIndex": 1,
+                "solution": "A sequência é de números pares consecutivos. O próximo número é 10."
+            },
+            {
+                "enunciado": "Questão 2 de Aritmética: Qual é o resto da divisão de 17 por 3?",
+                "alternatives": ["0", "1", "2", "3", "4"],
+                "correctAnswerIndex": 2,
+                "solution": "17 dividido por 3 é 5 com resto 2. (3 * 5 = 15; 17 - 15 = 2)."
+            },
+            {
+                "enunciado": "Questão 3 de Aritmética: Qual é o MDC (Máximo Divisor Comum) de 12 e 18?",
+                "alternatives": ["2", "3", "6", "9", "12"],
+                "correctAnswerIndex": 2,
+                "solution": "Os divisores de 12 são: 1, 2, 3, 4, 6, 12.\nOs divisores de 18 são: 1, 2, 3, 6, 9, 18.\nO maior divisor comum é 6."
+            },
+            {
+                "enunciado": "Questão 4 de Aritmética: Qual é o MMC (Mínimo Múltiplo Comum) de 4 e 6?",
+                "alternatives": ["12", "18", "24", "30", "36"],
+                "correctAnswerIndex": 0,
+                "solution": "Os múltiplos de 4 são: 4, 8, 12, 16, 20, ...\nOs múltiplos de 6 são: 6, 12, 18, 24, ...\nO menor múltiplo comum é 12."
+            },
+            {
+                "enunciado": "Questão 5 de Aritmética: Um número é par se seu último algarismo é:",
+                "alternatives": ["1, 3, 5, 7 ou 9", "0, 2, 4, 6 ou 8", "0 ou 5", "qualquer um", "nenhum desses"],
+                "correctAnswerIndex": 1,
+                "solution": "Um número é par se for divisível por 2, ou seja, se seu último algarismo for 0, 2, 4, 6 ou 8."
+            },
+            {
+                "enunciado": "Questão 6 de Aritmética: Qual é a forma irredutível da fração 10/15?",
+                "alternatives": ["1/2", "2/3", "3/5", "5/10", "10/15"],
+                "correctAnswerIndex": 1,
+                "solution": "Podemos dividir o numerador e o denominador pelo MDC(10, 15) que é 5.\n10 ÷ 5 = 2\n15 ÷ 5 = 3\nFração irredutível é 2/3."
+            },
+            {
+                "enunciado": "Questão 7 de Aritmética: Qual o resultado de (2 + 3) * 4 - 1?",
+                "alternatives": ["15", "16", "19", "20", "23"],
+                "correctAnswerIndex": 2,
+                "solution": "Seguindo a ordem das operações (PEMDAS/BODMAS):\n(2 + 3) * 4 - 1\n5 * 4 - 1\n20 - 1 = 19."
+            },
+            {
+                "enunciado": "Questão 8 de Aritmética: Quantos números primos existem entre 1 e 10 (inclusive)?",
+                "alternatives": ["3", "4", "5", "6", "7"],
+                "correctAnswerIndex": 1,
+                "solution": "Os números primos entre 1 e 10 são: 2, 3, 5, 7. Existem 4 números primos."
+            },
+            {
+                "enunciado": "Questão 9 de Aritmética: Se um número é divisível por 2 e por 3, ele é necessariamente divisível por:",
+                "alternatives": ["4", "5", "6", "7", "8"],
+                "correctAnswerIndex": 2,
+                "solution": "Se um número é divisível por 2 e por 3, ele é divisível pelo MMC(2, 3), que é 6."
+            },
+            {
+                "enunciado": "Questão 10 de Aritmética: Usando o Algoritmo de Euclides, encontre o MDC(24, 36).",
+                "alternatives": ["6", "8", "12", "18", "24"],
+                "correctAnswerIndex": 2,
+                "solution": "36 = 1 * 24 + 12\n24 = 2 * 12 + 0\nO último resto não nulo é 12. Então, MDC(24, 36) = 12."
+            }
+        ]
+    }
+}

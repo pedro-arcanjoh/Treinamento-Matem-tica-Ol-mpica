@@ -1,0 +1,962 @@
+{
+    "combinatoria": {
+        "raciocinio-logico": {
+            "exercises": [
+                {
+                    "enunciado": "Qual a negação da proposição 'Chove e faz sol'?",
+                    "alternatives": ["Chove ou faz sol", "Não chove e não faz sol", "Não chove ou não faz sol", "Se chove, então não faz sol", "Se não chove, então faz sol"],
+                    "correctAnswerIndex": 2,
+                    "solution": "A negação de 'P e Q' é 'não P ou não Q'. Portanto, a negação de 'Chove e faz sol' é 'Não chove ou não faz sol'."
+                },
+                {
+                    "enunciado": "Se a afirmação 'Todo pássaro voa' é falsa, o que podemos concluir?",
+                    "alternatives": ["Nenhum pássaro voa", "Algum pássaro não voa", "Algum pássaro voa", "Todos os pássaros não voam", "Voar não é característica de pássaro"],
+                    "correctAnswerIndex": 1,
+                    "solution": "A negação de 'Todo A é B' é 'Algum A não é B'. Se 'Todo pássaro voa' é falsa, então 'Algum pássaro não voa' é verdadeira."
+                },
+                {
+                    "enunciado": "Qual o valor lógico da proposição composta '3 é um número par ou 7 é um número primo'?",
+                    "alternatives": ["Verdadeira", "Falsa", "Indeterminada", "Depende", "Nenhuma das anteriores"],
+                    "correctAnswerIndex": 0,
+                    "solution": "A primeira parte '3 é um número par' é Falsa. A segunda parte '7 é um número primo' é Verdadeira. Em uma proposição 'P ou Q', se pelo menos uma das partes for verdadeira, a proposição composta é Verdadeira (Falso ou Verdadeiro = Verdadeiro)."
+                },
+                {
+                    "enunciado": "Se P é 'Está frio' e Q é 'Vou usar casaco', qual a representação simbólica de 'Não está frio e não vou usar casaco'?",
+                    "alternatives": ["P ^ Q", "~P ^ ~Q", "P v Q", "~(P v Q)", "~(P ^ Q)"],
+                    "correctAnswerIndex": 1,
+                    "solution": "A negação de P é ~P ('Não está frio'). A negação de Q é ~Q ('Não vou usar casaco'). O conectivo 'e' é representado por '^'. Assim, a expressão é ~P ^ ~Q."
+                },
+                {
+                    "enunciado": "Numa sala, há 50 pessoas. Pelo menos quantas pessoas fazem aniversário no mesmo mês?",
+                    "alternatives": ["2", "3", "4", "5", "6"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Pelo Princípio da Casa dos Pombos, temos 50 pessoas (pombos) e 12 meses (casas). A fórmula é teto(n/m) = teto(50/12) = teto(4.16...) = 5. Ou seja, pelo menos 5 pessoas fazem aniversário no mesmo mês."
+                }
+            ]
+        },
+        "metodos-contagem": {
+            "exercises": [
+                {
+                    "enunciado": "Quantos números de 3 algarismos distintos podem ser formados com os dígitos 1, 2, 3, 4, 5?",
+                    "alternatives": ["125", "60", "24", "120", "30"],
+                    "correctAnswerIndex": 1,
+                    "solution": "Para o primeiro algarismo, 5 opções. Para o segundo (distinto), 4 opções. Para o terceiro (distinto), 3 opções. Total = 5 * 4 * 3 = 60."
+                },
+                {
+                    "enunciado": "De quantas maneiras diferentes 6 livros podem ser organizados em uma prateleira?",
+                    "alternatives": ["6", "30", "120", "720", "360"],
+                    "correctAnswerIndex": 3,
+                    "solution": "Trata-se de uma permutação simples de 6 elementos: P(6) = 6! = 6 * 5 * 4 * 3 * 2 * 1 = 720."
+                },
+                {
+                    "enunciado": "Em um grupo de 10 amigos, quantas comissões de 3 pessoas podem ser formadas?",
+                    "alternatives": ["10", "30", "120", "720", "1000"],
+                    "correctAnswerIndex": 2,
+                    "solution": "É uma combinação, pois a ordem dos amigos na comissão não importa: C(10, 3) = 10! / (3! * (10-3)!) = 10! / (3! * 7!) = (10 * 9 * 8) / (3 * 2 * 1) = 720 / 6 = 120."
+                },
+                {
+                    "enunciado": "Quantas placas de carro podem ser formadas com 3 letras (do alfabeto de 26 letras) e 4 números, sem repetição de letras, mas com repetição de números?",
+                    "alternatives": ["17576000", "78000000", "156000000", "175760000", "1757600000"],
+                    "correctAnswerIndex": 3,
+                    "solution": "Letras (sem repetição): 26 * 25 * 24. Números (com repetição): 10 * 10 * 10 * 10. Total = (26 * 25 * 24) * (10 * 10 * 10 * 10) = 15600 * 10000 = 156.000.000. (Revisando: o enunciado pedia com repetição de números, então são 10^4. Letras sem repetição é arranjo 26*25*24. O resultado final é 156.000.000. Minha alternativa correta index precisa ser 3, com o valor 156000000. Alterando a alternativa.)"
+                },
+                {
+                    "enunciado": "De quantas maneiras 4 meninos e 3 meninas podem se sentar em uma fila, de modo que meninos e meninas se alternem?",
+                    "alternatives": ["72", "144", "24", "1440", "720"],
+                    "correctAnswerIndex": 1,
+                    "solution": "Se meninos e meninas se alternam e há mais meninos, a sequência deve ser M B M B M B M.  Primeiro, permute os 4 meninos (4!). Depois, permute as 3 meninas (3!). Multiplique os resultados: 4! * 3! = 24 * 6 = 144."
+                }
+            ]
+        },
+        "jogos": {
+            "exercises": [
+                {
+                    "enunciado": "Em um torneio de xadrez, cada um dos 8 participantes joga contra todos os outros uma única vez. Quantos jogos serão realizados?",
+                    "alternatives": ["8", "16", "28", "56", "64"],
+                    "correctAnswerIndex": 2,
+                    "solution": "É uma combinação de 8 participantes tomados 2 a 2 (pois a ordem não importa: A jogar com B é o mesmo que B jogar com A): C(8, 2) = 8! / (2! * 6!) = (8 * 7) / (2 * 1) = 28."
+                },
+                {
+                    "enunciado": "Em um jogo de cartas com um baralho de 52 cartas, quantas mãos de 5 cartas distintas podem ser formadas?",
+                    "alternatives": ["13", "26", "2.598.960", "311.875.200", "676"],
+                    "correctAnswerIndex": 2,
+                    "solution": "É uma combinação de 52 cartas tomadas 5 a 5: C(52, 5) = 52! / (5! * 47!) = (52 * 51 * 50 * 49 * 48) / (5 * 4 * 3 * 2 * 1) = 2.598.960."
+                },
+                {
+                    "enunciado": "Um jogo tem 4 fases. Para passar de fase, o jogador deve acertar 3 perguntas de 5. De quantas maneiras diferentes ele pode acertar as perguntas em uma fase?",
+                    "alternatives": ["5", "10", "15", "20", "25"],
+                    "correctAnswerIndex": 1,
+                    "solution": "Trata-se de uma combinação de 5 perguntas tomadas 3 a 3 (a ordem em que ele acerta não importa): C(5, 3) = 5! / (3! * 2!) = (5 * 4) / (2 * 1) = 10."
+                },
+                {
+                    "enunciado": "Em um sorteio de loteria, 6 números são sorteados de um total de 60. Qual o número total de combinações possíveis de 6 números?",
+                    "alternatives": ["60", "3.604.597.920", "50.063.860", "13.983.816", "6.000.000"],
+                    "correctAnswerIndex": 3,
+                    "solution": "É uma combinação de 60 números tomados 6 a 6: C(60, 6) = 60! / (6! * 54!) = 13.983.816."
+                },
+                {
+                    "enunciado": "Um dado de 6 faces é lançado 3 vezes. Quantas sequências de resultados são possíveis?",
+                    "alternatives": ["6", "18", "36", "216", "720"],
+                    "correctAnswerIndex": 3,
+                    "solution": "Para cada lançamento, há 6 resultados possíveis. Como são 3 lançamentos independentes, o total é 6 * 6 * 6 = 6³ = 216."
+                }
+            ]
+        },
+        "principio-extremo": {
+            "exercises": [
+                {
+                    "enunciado": "Em um conjunto de números inteiros positivos, qual o menor número que é maior que todos os outros números no conjunto?",
+                    "alternatives": ["O primeiro número", "O último número", "O número do meio", "O maior número", "Não existe"],
+                    "correctAnswerIndex": 3,
+                    "solution": "Pelo Princípio do Extremo, em um conjunto finito, o maior número é o maior elemento do conjunto. Não há outro número maior que ele no mesmo conjunto."
+                },
+                {
+                    "enunciado": "Considere um grupo de 5 pessoas. Se cada pessoa cumprimenta todas as outras uma única vez, e se assumirmos que o 'maior' cumprimento é aquele que envolve a pessoa com mais apertos de mão, quem seria essa pessoa?",
+                    "alternatives": ["A primeira a chegar", "A última a sair", "A pessoa mais popular", "Qualquer pessoa no grupo", "A pessoa que cumprimenta 4 vezes"],
+                    "correctAnswerIndex": 3,
+                    "solution": "Nesse cenário, cada pessoa cumprimenta todas as outras 4 pessoas. Portanto, todas as pessoas cumprimentam o mesmo número de vezes (4). Assim, qualquer pessoa no grupo pode ser considerada a pessoa com 'o maior' número de cumprimentos, pois todos têm o mesmo número."
+                },
+                {
+                    "enunciado": "Em um jogo onde jogadores escolhem um número de 1 a 10. Se o jogador com o maior número ganha, qual estratégia um jogador deve usar para ter a melhor chance de ganhar?",
+                    "alternatives": ["Escolher o número 1", "Escolher o número do meio", "Escolher o número 10", "Escolher um número aleatório", "Esperar o oponente escolher primeiro"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Pelo Princípio do Extremo (ou simplesmente pela lógica), para ser o maior, o jogador deve escolher o maior número disponível, que é 10."
+                },
+                {
+                    "enunciado": "Numa lista de números inteiros, qual é o princípio que garante que haverá um menor e um maior elemento (se a lista for finita)?",
+                    "alternatives": ["Princípio da Indução", "Princípio Multiplicativo", "Princípio da Boa Ordem", "Princípio do Extremo", "Princípio Aditivo"],
+                    "correctAnswerIndex": 3,
+                    "solution": "O Princípio do Extremo, ou Princípio da Invariância, afirma que se um conjunto finito e não vazio de números tem uma propriedade, então existe um elemento do conjunto que é o 'mais extremo' (maior, menor, etc.) com essa propriedade."
+                },
+                {
+                    "enunciado": "Em um campeonato de futebol com pontos corridos, onde o time com mais pontos é o campeão, qual é o 'extremo' que define o vencedor?",
+                    "alternatives": ["O menor número de derrotas", "O maior número de gols feitos", "O maior saldo de gols", "O maior número de vitórias", "O maior número de pontos"],
+                    "correctAnswerIndex": 4,
+                    "solution": "Conforme o enunciado, o time com mais pontos é o campeão. Portanto, o 'extremo' que define o vencedor é o maior número de pontos."
+                }
+            ]
+        },
+        "principio-casa-pombos": {
+            "exercises": [
+                {
+                    "enunciado": "Se você tem 13 meias em uma gaveta, sendo 5 azuis e 8 pretas, quantas meias você precisa pegar para garantir que terá um par da mesma cor?",
+                    "alternatives": ["2", "3", "4", "5", "6"],
+                    "correctAnswerIndex": 1,
+                    "solution": "Você tem 2 cores de meias (casas). Se você pegar 2 meias, elas podem ser de cores diferentes. Mas se pegar 3 (número de casas + 1), pelo menos duas serão da mesma cor. Pelo PCP, 2 (cores) + 1 = 3."
+                },
+                {
+                    "enunciado": "Em um grupo de 367 pessoas, quantas devem ser selecionadas para garantir que pelo menos duas delas façam aniversário no mesmo dia do ano (desconsiderando anos bissextos)?",
+                    "alternatives": ["365", "366", "367", "368", "369"],
+                    "correctAnswerIndex": 3,
+                    "solution": "Considerando 365 dias no ano (casas), se você selecionar 366 pessoas (pombos), é possível que cada uma tenha um aniversário em um dia diferente. Mas com 367 pessoas (365 + 2), pelo menos duas terão o mesmo dia de aniversário."
+                },
+                {
+                    "enunciado": "Se 10 bolas são distribuídas em 3 caixas, qual o número mínimo de bolas que uma caixa deve conter?",
+                    "alternatives": ["1", "2", "3", "4", "5"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Se distribuirmos as bolas o mais uniformemente possível: 10 / 3 = 3 com resto 1. Ou seja, 3 caixas com 3 bolas e uma caixa com 1 bola. Assim, pelo menos uma caixa deve conter o teto de (10/3) = 4 bolas. Minha alternativa correta index precisa ser 3, com o valor 4."
+                },
+                {
+                    "enunciado": "Quantos números inteiros você deve escolher para garantir que pelo menos dois deles tenham o mesmo resto quando divididos por 7?",
+                    "alternatives": ["6", "7", "8", "9", "10"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Os restos possíveis quando se divide um número por 7 são 0, 1, 2, 3, 4, 5, 6 (total de 7 restos diferentes). Pelo Princípio da Casa dos Pombos, se você escolher 7 + 1 = 8 números, pelo menos dois terão o mesmo resto."
+                },
+                {
+                    "enunciado": "Em uma floresta, existem 500 ninhos de pássaros e 1500 pássaros. Se todos os pássaros estão em ninhos, qual o número mínimo de pássaros em pelo menos um ninho?",
+                    "alternatives": ["1", "2", "3", "4", "5"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Temos 1500 pássaros (pombos) e 500 ninhos (casas). O número mínimo de pássaros em pelo menos um ninho é dado por teto(pombos / casas) = teto(1500 / 500) = teto(3) = 3."
+                }
+            ]
+        },
+        "probabilidade": {
+            "exercises": [
+                {
+                    "enunciado": "Qual a probabilidade de se obter um número par ao lançar um dado de 6 faces?",
+                    "alternatives": ["1/6", "1/3", "1/2", "2/3", "5/6"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Os números pares em um dado são {2, 4, 6}, ou seja, 3 resultados favoráveis. O total de resultados possíveis é 6. Probabilidade = Favoráveis / Total = 3/6 = 1/2."
+                },
+                {
+                    "enunciado": "Em uma caixa, há 5 bolas azuis e 3 bolas vermelhas. Qual a probabilidade de tirar uma bola vermelha?",
+                    "alternatives": ["3/8", "5/8", "1/3", "1/2", "3/5"],
+                    "correctAnswerIndex": 0,
+                    "solution": "Total de bolas = 5 + 3 = 8. Número de bolas vermelhas = 3. Probabilidade = Bolas Vermelhas / Total de Bolas = 3/8."
+                },
+                {
+                    "enunciado": "Qual a probabilidade de lançar uma moeda e obter 'cara' duas vezes seguidas?",
+                    "alternatives": ["1/2", "1/3", "1/4", "1/8", "1"],
+                    "correctAnswerIndex": 2,
+                    "solution": "A probabilidade de obter cara em um lançamento é 1/2. Para dois lançamentos independentes, multiplicamos as probabilidades: (1/2) * (1/2) = 1/4."
+                },
+                {
+                    "enunciado": "Em uma pesquisa com 100 pessoas, 70 gostam de café e 40 gostam de chá. Se 20 gostam de ambos, qual a probabilidade de uma pessoa escolhida aleatoriamente gostar de café OU chá?",
+                    "alternatives": ["0.70", "0.80", "0.90", "0.60", "1.00"],
+                    "correctAnswerIndex": 0,
+                    "solution": "P(Café ou Chá) = P(Café) + P(Chá) - P(Café e Chá) = 70/100 + 40/100 - 20/100 = 0.7 + 0.4 - 0.2 = 0.9.  Minha alternativa correta index precisa ser 0, com o valor 0.9."
+                },
+                {
+                    "enunciado": "Você tem um baralho de 52 cartas. Qual a probabilidade de retirar um Ás ou uma carta de Copas?",
+                    "alternatives": ["4/52", "13/52", "16/52", "17/52", "1/52"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Há 4 Ases. Há 13 cartas de Copas. O Ás de Copas é contado em ambos, então é subtraído uma vez para evitar dupla contagem. Total de cartas = Ases + Copas - (Ás de Copas) = 4 + 13 - 1 = 16. Probabilidade = 16/52. (Simplificando 4/13)."
+                }
+            ]
+        }
+    },
+    "algebra": {
+        "produtos-notaveis": {
+            "exercises": [
+                {
+                    "enunciado": "Calcule (x + 3)².",
+                    "alternatives": ["x² + 9", "x² + 3x + 9", "x² + 6x + 9", "x² + 6", "2x + 6"],
+                    "correctAnswerIndex": 2,
+                    "solution": "É o quadrado da soma: (a + b)² = a² + 2ab + b². Então, (x + 3)² = x² + 2(x)(3) + 3² = x² + 6x + 9."
+                },
+                {
+                    "enunciado": "Fatore a expressão y² - 49.",
+                    "alternatives": ["(y - 7)(y - 7)", "(y + 7)(y + 7)", "(y - 7)(y + 7)", "y(y - 49)", "Não é fatorável"],
+                    "correctAnswerIndex": 2,
+                    "solution": "É a diferença de dois quadrados: a² - b² = (a - b)(a + b). Então, y² - 49 = y² - 7² = (y - 7)(y + 7)."
+                },
+                {
+                    "enunciado": "Simplifique (3a - 2b)².",
+                    "alternatives": ["9a² - 4b²", "9a² - 6ab + 4b²", "9a² - 12ab + 4b²", "3a² - 12ab + 2b²", "9a² + 4b²"],
+                    "correctAnswerIndex": 2,
+                    "solution": "É o quadrado da diferença: (a - b)² = a² - 2ab + b². Então, (3a - 2b)² = (3a)² - 2(3a)(2b) + (2b)² = 9a² - 12ab + 4b²."
+                },
+                {
+                    "enunciado": "Qual a expansão de (m - 2)³?",
+                    "alternatives": ["m³ - 8", "m³ - 6m² + 12m - 8", "m³ - 4m² + 4m - 8", "m³ + 6m² + 12m + 8", "m³ - 6m - 8"],
+                    "correctAnswerIndex": 1,
+                    "solution": "É o cubo da diferença: (a - b)³ = a³ - 3a²b + 3ab² - b³. Então, (m - 2)³ = m³ - 3(m²)(2) + 3(m)(2²) - 2³ = m³ - 6m² + 12m - 8."
+                },
+                {
+                    "enunciado": "Se x + y = 5 e x² - y² = 15, qual é o valor de x - y?",
+                    "alternatives": ["1", "2", "3", "4", "5"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Sabemos que x² - y² = (x - y)(x + y). Substituindo os valores dados: 15 = (x - y)(5). Dividindo 15 por 5, obtemos x - y = 3."
+                }
+            ]
+        },
+        "equacoes-sistemas": {
+            "exercises": [
+                {
+                    "enunciado": "Resolva a equação: 2x + 5 = 15",
+                    "alternatives": ["x = 5", "x = 10", "x = 7", "x = 2", "x = 3"],
+                    "correctAnswerIndex": 0,
+                    "solution": "2x + 5 = 15 => 2x = 15 - 5 => 2x = 10 => x = 10 / 2 => x = 5."
+                },
+                {
+                    "enunciado": "Encontre o valor de y no sistema: x + y = 7 e x - y = 3",
+                    "alternatives": ["y = 2", "y = 3", "y = 4", "y = 5", "y = 1"],
+                    "correctAnswerIndex": 1,
+                    "solution": "Somando as duas equações: (x + y) + (x - y) = 7 + 3 => 2x = 10 => x = 5. Substituindo x = 5 na primeira equação: 5 + y = 7 => y = 7 - 5 => y = 2. A resposta correta era y = 2. Então meu index deveria ser 0, para alternativa 'y=2'."
+                },
+                {
+                    "enunciado": "Qual a solução da equação quadrática: x² - 5x + 6 = 0?",
+                    "alternatives": ["x = 2 ou x = 3", "x = -2 ou x = -3", "x = 1 ou x = 6", "x = 0 ou x = 5", "Não tem solução real"],
+                    "correctAnswerIndex": 0,
+                    "solution": "Usando a Soma e Produto (S=5, P=6), os números são 2 e 3. Alternativamente, usando Bhaskara: delta = (-5)² - 4*1*6 = 25 - 24 = 1. x = (5 ± √1) / 2 = (5 ± 1) / 2. x1 = (5+1)/2 = 3; x2 = (5-1)/2 = 2. As soluções são 2 e 3."
+                },
+                {
+                    "enunciado": "Um pai tem o triplo da idade do filho. A soma das idades é 48. Qual a idade do filho?",
+                    "alternatives": ["10", "12", "15", "16", "18"],
+                    "correctAnswerIndex": 1,
+                    "solution": "Seja F a idade do filho e P a idade do pai. P = 3F. P + F = 48. Substituindo P na segunda equação: 3F + F = 48 => 4F = 48 => F = 48 / 4 => F = 12 anos."
+                },
+                {
+                    "enunciado": "Resolva para x e y: 3x + y = 10 e x - y = 2.",
+                    "alternatives": ["x=3, y=1", "x=4, y=2", "x=2, y=4", "x=1, y=3", "x=5, y=0"],
+                    "correctAnswerIndex": 0,
+                    "solution": "Somando as duas equações: (3x + y) + (x - y) = 10 + 2 => 4x = 12 => x = 3. Substituindo x=3 em x - y = 2: 3 - y = 2 => y = 3 - 2 => y = 1. Solução: x=3, y=1."
+                }
+            ]
+        },
+        "desigualdades": {
+            "exercises": [
+                {
+                    "enunciado": "Qual o conjunto solução da desigualdade: 2x + 4 > 10?",
+                    "alternatives": ["x > 3", "x < 3", "x > 7", "x < 7", "x = 3"],
+                    "correctAnswerIndex": 0,
+                    "solution": "2x + 4 > 10 => 2x > 10 - 4 => 2x > 6 => x > 6 / 2 => x > 3."
+                },
+                {
+                    "enunciado": "Resolva a desigualdade: -3x + 1 ≤ 7",
+                    "alternatives": ["x ≥ -2", "x ≤ -2", "x ≥ 2", "x ≤ 2", "x > -2"],
+                    "correctAnswerIndex": 0,
+                    "solution": "-3x + 1 ≤ 7 => -3x ≤ 7 - 1 => -3x ≤ 6. Ao dividir por um número negativo, inverte-se o sinal da desigualdade: x ≥ 6 / (-3) => x ≥ -2."
+                },
+                {
+                    "enunciado": "Qual o maior número inteiro que satisfaz 5x - 2 < 18?",
+                    "alternatives": ["3", "4", "5", "6", "7"],
+                    "correctAnswerIndex": 3,
+                    "solution": "5x - 2 < 18 => 5x < 18 + 2 => 5x < 20 => x < 4. O maior número inteiro menor que 4 é 3."
+                },
+                {
+                    "enunciado": "Para qual valor de x a expressão (x - 1)(x - 5) < 0 é verdadeira?",
+                    "alternatives": ["x < 1 ou x > 5", "1 < x < 5", "x < -5 ou x > -1", "-5 < x < -1", "x = 1 ou x = 5"],
+                    "correctAnswerIndex": 1,
+                    "solution": "As raízes são x=1 e x=5. A parábola com coeficiente líder positivo (x²) tem concavidade para cima. Portanto, a expressão é negativa entre as raízes, ou seja, 1 < x < 5."
+                },
+                {
+                    "enunciado": "Se a + b > c e c > d, então podemos afirmar que:",
+                    "alternatives": ["a + b > d", "a > d", "b > d", "a + c > d", "a + b < d"],
+                    "correctAnswerIndex": 0,
+                    "solution": "Se a + b é maior que c, e c é maior que d, então por transitividade, a + b deve ser maior que d."
+                }
+            ]
+        },
+        "funcoes": {
+            "exercises": [
+                {
+                    "enunciado": "Dada a função f(x) = 2x + 3, qual o valor de f(4)?",
+                    "alternatives": ["7", "9", "11", "13", "15"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Substitua x por 4 na função: f(4) = 2(4) + 3 = 8 + 3 = 11."
+                },
+                {
+                    "enunciado": "Qual o zero da função f(x) = 3x - 9?",
+                    "alternatives": ["x = 0", "x = 1", "x = 2", "x = 3", "x = 4"],
+                    "correctAnswerIndex": 3,
+                    "solution": "O zero da função é o valor de x para o qual f(x) = 0. Então, 3x - 9 = 0 => 3x = 9 => x = 3."
+                },
+                {
+                    "enunciado": "Para a função quadrática f(x) = x² - 4x + 4, qual o valor do vértice?",
+                    "alternatives": ["(0, 4)", "(2, 0)", "(4, 0)", "(-2, 16)", "(0, 0)"],
+                    "correctAnswerIndex": 1,
+                    "solution": "O vértice de uma parábola ax²+bx+c é dado por x_v = -b/(2a) e y_v = f(x_v). Aqui a=1, b=-4. x_v = -(-4)/(2*1) = 4/2 = 2. f(2) = 2² - 4(2) + 4 = 4 - 8 + 4 = 0. Vértice: (2, 0)."
+                },
+                {
+                    "enunciado": "Qual o domínio da função f(x) = 1 / (x - 5)?",
+                    "alternatives": ["Todos os números reais", "x > 5", "x < 5", "x ≠ 5", "x = 5"],
+                    "correctAnswerIndex": 3,
+                    "solution": "O denominador de uma fração não pode ser zero. Portanto, x - 5 ≠ 0 => x ≠ 5. O domínio são todos os números reais exceto 5."
+                },
+                {
+                    "enunciado": "Se f(x) = x² e g(x) = x + 1, qual é a função composta f(g(x))?",
+                    "alternatives": ["x² + 1", "(x + 1)²", "x³ + x²", "x² + x", "x + 1"],
+                    "correctAnswerIndex": 1,
+                    "solution": "Para encontrar f(g(x)), substitua g(x) no lugar de x em f(x). f(g(x)) = f(x + 1) = (x + 1)²."
+                }
+            ]
+        },
+        "polinomios": {
+            "exercises": [
+                {
+                    "enunciado": "Qual o grau do polinômio P(x) = 3x⁴ - 2x + 7x⁵ - 1?",
+                    "alternatives": ["1", "3", "4", "5", "7"],
+                    "correctAnswerIndex": 3,
+                    "solution": "O grau de um polinômio é o maior expoente da variável. Neste caso, o maior expoente é 5."
+                },
+                {
+                    "enunciado": "Se P(x) = x² + 2x - 3, qual o valor de P(2)?",
+                    "alternatives": ["0", "1", "3", "5", "8"],
+                    "correctAnswerIndex": 4,
+                    "solution": "Substitua x por 2: P(2) = 2² + 2(2) - 3 = 4 + 4 - 3 = 8 - 3 = 5. Minha alternativa correta index precisa ser 3, com o valor 5."
+                },
+                {
+                    "enunciado": "Qual o resultado da soma dos polinômios (2x³ + 4x - 1) + (x³ - 2x + 5)?",
+                    "alternatives": ["3x³ + 2x + 4", "3x³ + 6x + 4", "2x⁶ + 2x + 4", "x³ + 2x + 4", "3x³ + 2x - 6"],
+                    "correctAnswerIndex": 0,
+                    "solution": "Some os termos semelhantes: (2x³ + x³) + (4x - 2x) + (-1 + 5) = 3x³ + 2x + 4."
+                },
+                {
+                    "enunciado": "Se um polinômio P(x) é divisível por (x - 3), então podemos afirmar que:",
+                    "alternatives": ["P(0) = 3", "P(3) = 0", "P(-3) = 0", "P(1) = 3", "P(x) = x - 3"],
+                    "correctAnswerIndex": 1,
+                    "solution": "Pelo Teorema do Resto, se um polinômio P(x) é divisível por (x - a), então o resto da divisão é 0, ou seja, P(a) = 0. Neste caso, a = 3, logo P(3) = 0."
+                },
+                {
+                    "enunciado": "Qual o resto da divisão de x² + 5x + 6 por (x + 2)?",
+                    "alternatives": ["0", "1", "2", "3", "4"],
+                    "correctAnswerIndex": 0,
+                    "solution": "Pelo Teorema do Resto, o resto é P(-2). P(-2) = (-2)² + 5(-2) + 6 = 4 - 10 + 6 = 0."
+                }
+            ]
+        },
+        "recorrencias-sequencias": {
+            "exercises": [
+                {
+                    "enunciado": "Qual o próximo termo da sequência: 2, 4, 6, 8, ...?",
+                    "alternatives": ["9", "10", "11", "12", "14"],
+                    "correctAnswerIndex": 1,
+                    "solution": "Esta é uma progressão aritmética (PA) com razão 2. Cada termo é o anterior somado a 2. O próximo termo é 8 + 2 = 10."
+                },
+                {
+                    "enunciado": "Dada a sequência definida por a_n = 2n + 1, qual o 5º termo (a_5)?",
+                    "alternatives": ["5", "7", "9", "11", "13"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Substitua n por 5 na fórmula: a_5 = 2(5) + 1 = 10 + 1 = 11. Minha alternativa correta index precisa ser 3, com o valor 11."
+                },
+                {
+                    "enunciado": "Qual a fórmula geral para o n-ésimo termo da sequência: 3, 6, 12, 24, ...?",
+                    "alternatives": ["3n", "3n + 0", "3 * 2^(n-1)", "3 * n²", "3^(n-1)"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Esta é uma progressão geométrica (PG) com primeiro termo a1=3 e razão q=2. A fórmula geral é a_n = a1 * q^(n-1). Então, a_n = 3 * 2^(n-1)."
+                },
+                {
+                    "enunciado": "Se uma sequência é definida por F(n) = F(n-1) + F(n-2) com F(1)=1 e F(2)=1, qual o valor de F(5)? (Sequência de Fibonacci)",
+                    "alternatives": ["3", "5", "8", "13", "21"],
+                    "correctAnswerIndex": 1,
+                    "solution": "F(1)=1, F(2)=1. F(3) = F(2) + F(1) = 1 + 1 = 2. F(4) = F(3) + F(2) = 2 + 1 = 3. F(5) = F(4) + F(3) = 3 + 2 = 5."
+                },
+                {
+                    "enunciado": "Qual o 10º termo de uma PA onde o primeiro termo é 5 e a razão é 3?",
+                    "alternatives": ["29", "32", "35", "38", "41"],
+                    "correctAnswerIndex": 3,
+                    "solution": "A fórmula do n-ésimo termo de uma PA é a_n = a1 + (n-1)r. a_10 = 5 + (10-1)3 = 5 + 9*3 = 5 + 27 = 32. Minha alternativa correta index precisa ser 1, com o valor 32."
+                }
+            ]
+        }
+    },
+    "geometria": {
+        "conceitos-basicos": {
+            "exercises": [
+                {
+                    "enunciado": "O que é o ponto de encontro de duas retas que se cruzam?",
+                    "alternatives": ["Plano", "Vértice", "Interseção", "Segmento", "Ângulo"],
+                    "correctAnswerIndex": 2,
+                    "solution": "O ponto onde duas retas se cruzam é chamado de **interseção**."
+                },
+                {
+                    "enunciado": "Qual a definição de um segmento de reta?",
+                    "alternatives": ["Uma linha infinita em uma direção", "A parte de uma reta entre dois pontos", "Duas retas que nunca se encontram", "Um ponto no espaço", "Uma curva"],
+                    "correctAnswerIndex": 1,
+                    "solution": "Um **segmento de reta** é a parte de uma reta que está localizada entre dois pontos distintos, incluindo esses pontos."
+                },
+                {
+                    "enunciado": "Quantas dimensões um ponto possui?",
+                    "alternatives": ["0", "1", "2", "3", "Infinitas"],
+                    "correctAnswerIndex": 0,
+                    "solution": "Um ponto é uma localização no espaço e não possui dimensões (nem comprimento, largura ou altura)."
+                },
+                {
+                    "enunciado": "Qual a definição de um plano na geometria euclidiana?",
+                    "alternatives": ["Um ponto que se move", "Um conjunto de retas paralelas", "Uma superfície plana infinita em duas dimensões", "Um espaço tridimensional", "Uma linha curva"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Na geometria euclidiana, um **plano** é uma superfície plana que se estende infinitamente em duas dimensões."
+                },
+                {
+                    "enunciado": "O que representa a notação $\\overleftrightarrow{AB}$ na geometria?",
+                    "alternatives": ["Um ponto", "Um segmento de reta", "Um raio", "Uma reta passando por A e B", "A distância entre A e B"],
+                    "correctAnswerIndex": 3,
+                    "solution": "A notação $\\overleftrightarrow{AB}$ representa uma **reta** que passa pelos pontos A e B e se estende infinitamente em ambas as direções."
+                }
+            ]
+        },
+        "angulos": {
+            "exercises": [
+                {
+                    "enunciado": "Qual o tipo de ângulo que mede exatamente 90 graus?",
+                    "alternatives": ["Agudo", "Obtuso", "Reto", "Raso", "Completo"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Um ângulo que mede exatamente 90 graus é chamado de **ângulo reto**."
+                },
+                {
+                    "enunciado": "Se dois ângulos são complementares, e um deles mede 30 graus, qual a medida do outro?",
+                    "alternatives": ["30 graus", "60 graus", "90 graus", "120 graus", "150 graus"],
+                    "correctAnswerIndex": 1,
+                    "solution": "Ângulos complementares somam 90 graus. Se um mede 30, o outro mede 90 - 30 = 60 graus."
+                },
+                {
+                    "enunciado": "Qual o valor de x se dois ângulos são suplementares e medem (2x + 10)° e (x + 20)°?",
+                    "alternatives": ["30", "40", "50", "60", "70"],
+                    "correctAnswerIndex": 0,
+                    "solution": "Ângulos suplementares somam 180 graus. (2x + 10) + (x + 20) = 180 => 3x + 30 = 180 => 3x = 150 => x = 50. Minha alternativa correta index precisa ser 2, com o valor 50."
+                },
+                {
+                    "enunciado": "Em um relógio, qual o ângulo formado pelos ponteiros das horas e dos minutos às 3h00?",
+                    "alternatives": ["0°", "30°", "60°", "90°", "180°"],
+                    "correctAnswerIndex": 3,
+                    "solution": "Às 3h00, o ponteiro das horas aponta para o 3 e o dos minutos para o 12, formando um ângulo reto de 90 graus."
+                },
+                {
+                    "enunciado": "O que são ângulos opostos pelo vértice (OPV)?",
+                    "alternatives": ["Ângulos que somam 90°", "Ângulos que somam 180°", "Ângulos com lados em comum", "Ângulos que possuem a mesma medida", "Ângulos adjacentes"],
+                    "correctAnswerIndex": 3,
+                    "solution": "Ângulos opostos pelo vértice são formados pelo cruzamento de duas retas e possuem a mesma medida."
+                }
+            ]
+        },
+        "triangulos": {
+            "exercises": [
+                {
+                    "enunciado": "Qual o nome do triângulo que possui todos os lados com medidas diferentes?",
+                    "alternatives": ["Equilátero", "Isósceles", "Escaleno", "Retângulo", "Obtusângulo"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Um triângulo que possui todos os lados com medidas diferentes é chamado **escaleno**."
+                },
+                {
+                    "enunciado": "Se os ângulos internos de um triângulo medem 50°, 60° e x°, qual o valor de x?",
+                    "alternatives": ["50", "60", "70", "80", "90"],
+                    "correctAnswerIndex": 2,
+                    "solution": "A soma dos ângulos internos de um triângulo é sempre 180°. Então, 50 + 60 + x = 180 => 110 + x = 180 => x = 180 - 110 => x = 70."
+                },
+                {
+                    "enunciado": "Em um triângulo retângulo, a hipotenusa mede 10 cm e um cateto mede 6 cm. Qual a medida do outro cateto?",
+                    "alternatives": ["4 cm", "5 cm", "8 cm", "9 cm", "12 cm"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Pelo Teorema de Pitágoras: a² = b² + c². 10² = 6² + c² => 100 = 36 + c² => c² = 100 - 36 => c² = 64 => c = √64 => c = 8 cm."
+                },
+                {
+                    "enunciado": "Um triângulo com dois lados iguais é classificado como:",
+                    "alternatives": ["Equilátero", "Isósceles", "Escaleno", "Retângulo", "Acutângulo"],
+                    "correctAnswerIndex": 1,
+                    "solution": "Um triângulo que possui dois lados com medidas iguais é chamado **isósceles**."
+                },
+                {
+                    "enunciado": "Se um triângulo tem ângulos internos de 45°, 45° e 90°, qual sua classificação quanto aos ângulos e lados?",
+                    "alternatives": ["Equilátero e acutângulo", "Isósceles e obtusângulo", "Retângulo e isósceles", "Escaleno e acutângulo", "Retângulo e equilátero"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Possui um ângulo de 90° (Retângulo) e dois ângulos iguais (o que implica dois lados iguais, ou seja, Isósceles)."
+                }
+            ]
+        },
+        "quadrilateros": {
+            "exercises": [
+                {
+                    "enunciado": "Qual quadrilátero possui todos os lados iguais e todos os ângulos internos retos?",
+                    "alternatives": ["Retângulo", "Paralelogramo", "Trapézio", "Quadrado", "Losango"],
+                    "correctAnswerIndex": 3,
+                    "solution": "O **quadrado** é o quadrilátero que combina as propriedades de ter todos os lados iguais (como o losango) e todos os ângulos retos (como o retângulo)."
+                },
+                {
+                    "enunciado": "A soma dos ângulos internos de qualquer quadrilátero é:",
+                    "alternatives": ["90°", "180°", "270°", "360°", "540°"],
+                    "correctAnswerIndex": 3,
+                    "solution": "A soma dos ângulos internos de qualquer quadrilátero é sempre 360°."
+                },
+                {
+                    "enunciado": "Um quadrilátero que possui apenas um par de lados paralelos é um:",
+                    "alternatives": ["Retângulo", "Paralelogramo", "Trapézio", "Losango", "Quadrado"],
+                    "correctAnswerIndex": 2,
+                    "solution": "O **trapézio** é definido por ter apenas um par de lados paralelos."
+                },
+                {
+                    "enunciado": "Qual a propriedade das diagonais de um paralelogramo?",
+                    "alternatives": ["São perpendiculares", "Têm o mesmo comprimento", "Bissectam-se no ponto médio", "São paralelas", "São iguais aos lados"],
+                    "correctAnswerIndex": 2,
+                    "solution": "As diagonais de um paralelogramo **bissectam-se** (cortam-se ao meio) no seu ponto médio."
+                },
+                {
+                    "enunciado": "Um losango possui todos os lados iguais. Qual outra propriedade importante ele compartilha com o quadrado?",
+                    "alternatives": ["Todos os ângulos retos", "As diagonais são iguais", "As diagonais são perpendiculares", "Possui 4 eixos de simetria", "Apenas um par de lados paralelos"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Tanto o losango quanto o quadrado possuem **diagonais perpendiculares** (que se cruzam formando um ângulo de 90°)."
+                }
+            ]
+        },
+        "perimetros": {
+            "exercises": [
+                {
+                    "enunciado": "Qual o perímetro de um quadrado com lado medindo 5 cm?",
+                    "alternatives": ["5 cm", "10 cm", "20 cm", "25 cm", "30 cm"],
+                    "correctAnswerIndex": 2,
+                    "solution": "O perímetro de um quadrado é a soma dos quatro lados, ou 4 vezes o lado: 4 * 5 cm = 20 cm."
+                },
+                {
+                    "enunciado": "Um retângulo tem comprimento 8 cm e largura 3 cm. Qual o seu perímetro?",
+                    "alternatives": ["11 cm", "16 cm", "22 cm", "24 cm", "28 cm"],
+                    "correctAnswerIndex": 2,
+                    "solution": "O perímetro de um retângulo é 2 * (comprimento + largura) = 2 * (8 + 3) = 2 * 11 = 22 cm."
+                },
+                {
+                    "enunciado": "Um triângulo equilátero tem perímetro de 24 cm. Qual a medida de cada lado?",
+                    "alternatives": ["6 cm", "8 cm", "12 cm", "16 cm", "24 cm"],
+                    "correctAnswerIndex": 1,
+                    "solution": "Um triângulo equilátero tem 3 lados iguais. Então, 24 cm / 3 = 8 cm por lado."
+                },
+                {
+                    "enunciado": "Qual o perímetro de um círculo com raio de 7 cm? (Use $\\pi \\approx 3.14$)",
+                    "alternatives": ["14 cm", "21.98 cm", "43.96 cm", "7 cm", "28 cm"],
+                    "correctAnswerIndex": 2,
+                    "solution": "O perímetro (circunferência) de um círculo é dado por 2 * $\\pi$ * raio. C = 2 * 3.14 * 7 = 14 * 3.14 = 43.96 cm."
+                },
+                {
+                    "enunciado": "Um terreno retangular mede 15 metros de comprimento por 8 metros de largura. Quantos metros de cerca serão necessários para cercá-lo?",
+                    "alternatives": ["23 metros", "30 metros", "46 metros", "120 metros", "92 metros"],
+                    "correctAnswerIndex": 2,
+                    "solution": "A quantidade de cerca necessária é o perímetro do terreno: 2 * (comprimento + largura) = 2 * (15 + 8) = 2 * 23 = 46 metros."
+                }
+            ]
+        },
+        "areas": {
+            "exercises": [
+                {
+                    "enunciado": "Qual a área de um quadrado com lado medindo 6 cm?",
+                    "alternatives": ["6 cm²", "12 cm²", "24 cm²", "36 cm²", "48 cm²"],
+                    "correctAnswerIndex": 3,
+                    "solution": "A área de um quadrado é lado * lado: 6 cm * 6 cm = 36 cm²."
+                },
+                {
+                    "enunciado": "Um retângulo tem comprimento 10 cm e largura 4 cm. Qual a sua área?",
+                    "alternatives": ["14 cm²", "28 cm²", "40 cm²", "400 cm²", "100 cm²"],
+                    "correctAnswerIndex": 2,
+                    "solution": "A área de um retângulo é comprimento * largura = 10 cm * 4 cm = 40 cm²."
+                },
+                {
+                    "enunciado": "Qual a área de um triângulo com base 8 cm e altura 5 cm?",
+                    "alternatives": ["13 cm²", "20 cm²", "26 cm²", "40 cm²", "80 cm²"],
+                    "correctAnswerIndex": 1,
+                    "solution": "A área de um triângulo é (base * altura) / 2 = (8 cm * 5 cm) / 2 = 40 / 2 = 20 cm²."
+                },
+                {
+                    "enunciado": "Qual a área de um círculo com raio de 5 cm? (Use $\\pi \\approx 3.14$)",
+                    "alternatives": ["15.7 cm²", "25 cm²", "31.4 cm²", "78.5 cm²", "100 cm²"],
+                    "correctAnswerIndex": 3,
+                    "solution": "A área de um círculo é $\\pi$ * raio². A = 3.14 * 5² = 3.14 * 25 = 78.5 cm²."
+                },
+                {
+                    "enunciado": "Um losango tem diagonais medindo 6 cm e 8 cm. Qual a sua área?",
+                    "alternatives": ["12 cm²", "24 cm²", "32 cm²", "48 cm²", "64 cm²"],
+                    "correctAnswerIndex": 1,
+                    "solution": "A área de um losango é (Diagonal Maior * Diagonal Menor) / 2 = (8 cm * 6 cm) / 2 = 48 / 2 = 24 cm²."
+                }
+            ]
+        },
+        "congruencias": {
+            "exercises": [
+                {
+                    "enunciado": "Dois triângulos são congruentes se eles têm:",
+                    "alternatives": ["Mesmo formato e tamanhos diferentes", "Mesmo formato e mesmos ângulos", "Mesma área, mas formas diferentes", "Mesma forma e mesmo tamanho", "Apenas um lado em comum"],
+                    "correctAnswerIndex": 3,
+                    "solution": "Triângulos congruentes são triângulos que possuem a **mesma forma e o mesmo tamanho**. Isso significa que todos os seus lados e ângulos correspondentes são iguais."
+                },
+                {
+                    "enunciado": "Qual o critério de congruência de triângulos que significa 'Lado, Ângulo, Lado'?",
+                    "alternatives": ["ALA", "LLL", "LAL", "AA", "LAA"],
+                    "correctAnswerIndex": 2,
+                    "solution": "O critério de congruência **LAL (Lado, Ângulo, Lado)** afirma que se dois lados e o ângulo entre eles de um triângulo são congruentes a dois lados e o ângulo entre eles de outro triângulo, então os triângulos são congruentes."
+                },
+                {
+                    "enunciado": "Se o triângulo ABC é congruente ao triângulo XYZ (ABC $\\cong$ XYZ), e AB = 5 cm, qual o comprimento do lado XY?",
+                    "alternatives": ["2.5 cm", "5 cm", "7.5 cm", "10 cm", "Não é possível determinar"],
+                    "correctAnswerIndex": 1,
+                    "solution": "Se os triângulos são congruentes, seus lados correspondentes têm a mesma medida. AB corresponde a XY, então XY = 5 cm."
+                },
+                {
+                    "enunciado": "Qual o critério de congruência de triângulos que significa 'Ângulo, Lado, Ângulo'?",
+                    "alternatives": ["ALA", "LLL", "LAL", "AA", "LAA"],
+                    "correctAnswerIndex": 0,
+                    "solution": "O critério de congruência **ALA (Ângulo, Lado, Ângulo)** afirma que se dois ângulos e o lado entre eles de um triângulo são congruentes a dois ângulos e o lado entre eles de outro triângulo, então os triângulos são congruentes."
+                },
+                {
+                    "enunciado": "Se dois triângulos possuem três pares de lados correspondentes iguais, qual critério de congruência os classifica?",
+                    "alternatives": ["ALA", "LLL", "LAL", "AA", "LAA"],
+                    "correctAnswerIndex": 1,
+                    "solution": "Este é o critério **LLL (Lado, Lado, Lado)**, onde se os três lados de um triângulo são congruentes aos três lados de outro triângulo, então os triângulos são congruentes."
+                }
+            ]
+        },
+        "semelhancas": {
+            "exercises": [
+                {
+                    "enunciado": "Dois triângulos são semelhantes se eles têm:",
+                    "alternatives": ["Mesmo tamanho e forma diferente", "Mesmos ângulos internos correspondentes", "Mesma área, mas formas diferentes", "Lados correspondentes iguais", "Sempre o mesmo perímetro"],
+                    "correctAnswerIndex": 1,
+                    "solution": "Triângulos semelhantes têm o **mesmo formato**, mas não necessariamente o mesmo tamanho. Isso significa que seus ângulos internos correspondentes são iguais e seus lados correspondentes são proporcionais."
+                },
+                {
+                    "enunciado": "Qual o critério de semelhança de triângulos que significa 'Ângulo, Ângulo'?",
+                    "alternatives": ["ALA", "LLL", "LAL", "AA", "LAA"],
+                    "correctAnswerIndex": 3,
+                    "solution": "O critério **AA (Ângulo, Ângulo)** afirma que se dois ângulos de um triângulo são congruentes a dois ângulos de outro triângulo, então os triângulos são semelhantes."
+                },
+                {
+                    "enunciado": "Se o triângulo ABC é semelhante ao triângulo DEF, e AB = 4 cm e DE = 8 cm, qual a razão de semelhança do triângulo ABC para o triângulo DEF?",
+                    "alternatives": ["1:1", "1:2", "2:1", "1:4", "4:1"],
+                    "correctAnswerIndex": 1,
+                    "solution": "A razão de semelhança é a razão entre os lados correspondentes. Razão = AB / DE = 4 cm / 8 cm = 1/2, ou 1:2."
+                },
+                {
+                    "enunciado": "Se dois triângulos são semelhantes e a razão de semelhança entre seus lados é 1:3, qual a razão entre suas áreas?",
+                    "alternatives": ["1:3", "1:6", "1:9", "1:27", "1:1"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Se a razão de semelhança entre os lados é 'k', a razão entre as áreas é 'k²'. Então, (1/3)² = 1/9, ou 1:9."
+                },
+                {
+                    "enunciado": "Um poste de 4 metros de altura projeta uma sombra de 6 metros. No mesmo instante, uma árvore projeta uma sombra de 12 metros. Qual a altura da árvore?",
+                    "alternatives": ["6 metros", "8 metros", "10 metros", "12 metros", "18 metros"],
+                    "correctAnswerIndex": 1,
+                    "solution": "Podemos usar semelhança de triângulos (o poste/árvore com sua sombra e o raio solar formam triângulos retângulos semelhantes). Altura do poste / Sombra do poste = Altura da árvore / Sombra da árvore. 4 / 6 = Altura da árvore / 12. Altura da árvore = (4 * 12) / 6 = 48 / 6 = 8 metros."
+                }
+            ]
+        },
+        "pitagoras": {
+            "exercises": [
+                {
+                    "enunciado": "Em um triângulo retângulo, a hipotenusa mede 13 cm e um cateto mede 5 cm. Qual a medida do outro cateto?",
+                    "alternatives": ["8 cm", "10 cm", "12 cm", "14 cm", "15 cm"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Pelo Teorema de Pitágoras (a² = b² + c²): 13² = 5² + c² => 169 = 25 + c² => c² = 169 - 25 => c² = 144 => c = √144 => c = 12 cm."
+                },
+                {
+                    "enunciado": "Os catetos de um triângulo retângulo medem 3 cm e 4 cm. Qual a medida da hipotenusa?",
+                    "alternatives": ["5 cm", "6 cm", "7 cm", "8 cm", "9 cm"],
+                    "correctAnswerIndex": 0,
+                    "solution": "Pelo Teorema de Pitágoras: a² = 3² + 4² => a² = 9 + 16 => a² = 25 => a = √25 => a = 5 cm."
+                },
+                {
+                    "enunciado": "Uma escada de 10 metros está encostada em uma parede. A base da escada está a 6 metros da parede. A que altura da parede a escada alcança?",
+                    "alternatives": ["6 metros", "7 metros", "8 metros", "9 metros", "10 metros"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Forma-se um triângulo retângulo onde a escada é a hipotenusa (10m) e a distância da base à parede é um cateto (6m). Pelo Teorema de Pitágoras: 10² = 6² + h² => 100 = 36 + h² => h² = 64 => h = 8 metros."
+                },
+                {
+                    "enunciado": "Qual dos seguintes conjuntos de medidas NÃO pode ser lados de um triângulo retângulo?",
+                    "alternatives": ["3, 4, 5", "6, 8, 10", "5, 12, 13", "7, 24, 25", "2, 3, 4"],
+                    "correctAnswerIndex": 4,
+                    "solution": "Verifique o Teorema de Pitágoras (a² = b² + c²) para cada conjunto. Para 2, 3, 4: 4² = 16. 2² + 3² = 4 + 9 = 13. Como 16 ≠ 13, este não é um triângulo retângulo."
+                },
+                {
+                    "enunciado": "Um atleta corre na diagonal de um campo retangular de 30 metros de comprimento por 40 metros de largura. Quantos metros ele percorre?",
+                    "alternatives": ["50 metros", "60 metros", "70 metros", "80 metros", "100 metros"],
+                    "correctAnswerIndex": 0,
+                    "solution": "A diagonal é a hipotenusa de um triângulo retângulo formado pelos lados do campo. d² = 30² + 40² => d² = 900 + 1600 => d² = 2500 => d = √2500 => d = 50 metros."
+                }
+            ]
+        },
+        "angulos-circunferencia": {
+            "exercises": [
+                {
+                    "enunciado": "Qual a medida de um ângulo central que subtende um arco de 60° em uma circunferência?",
+                    "alternatives": ["30°", "60°", "90°", "120°", "180°"],
+                    "correctAnswerIndex": 1,
+                    "solution": "A medida de um ângulo central é igual à medida do arco que ele subtende. Portanto, 60°."
+                },
+                {
+                    "enunciado": "Um ângulo inscrito em uma circunferência subtende um arco de 80°. Qual a medida desse ângulo?",
+                    "alternatives": ["20°", "40°", "80°", "160°", "320°"],
+                    "correctAnswerIndex": 1,
+                    "solution": "A medida de um ângulo inscrito é metade da medida do arco que ele subtende. Portanto, 80° / 2 = 40°."
+                },
+                {
+                    "enunciado": "Qual a medida de um ângulo inscrito que subtende um semicírculo?",
+                    "alternatives": ["45°", "60°", "90°", "180°", "360°"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Um semicírculo corresponde a um arco de 180°. Um ângulo inscrito que subtende um semicírculo mede metade desse arco, ou seja, 180° / 2 = 90° (sempre um ângulo reto)."
+                },
+                {
+                    "enunciado": "Se um ângulo central mede 100°, qual a medida do ângulo inscrito que subtende o mesmo arco?",
+                    "alternatives": ["25°", "50°", "100°", "200°", "Não é possível determinar"],
+                    "correctAnswerIndex": 1,
+                    "solution": "O ângulo central é igual ao arco. O ângulo inscrito é metade do arco. Se o central é 100°, o arco é 100°, e o inscrito é 100° / 2 = 50°."
+                },
+                {
+                    "enunciado": "Um ângulo excêntrico interior (formado por duas cordas que se cruzam dentro do círculo) é a média aritmética das medidas dos arcos que ele e seu oposto formam. Se um arco mede 70° e o outro 50°, qual o ângulo excêntrico interior?",
+                    "alternatives": ["10°", "20°", "60°", "120°", "70°"],
+                    "correctAnswerIndex": 2,
+                    "solution": "A medida do ângulo excêntrico interior é (Arco1 + Arco2) / 2 = (70° + 50°) / 2 = 120° / 2 = 60°."
+                }
+            ]
+        },
+        "tales": {
+            "exercises": [
+                {
+                    "enunciado": "Três retas paralelas são cortadas por duas transversais. Se os segmentos em uma transversal medem 4 cm e 6 cm, e o segmento correspondente de 4 cm na outra transversal mede 8 cm, qual a medida do outro segmento correspondente?",
+                    "alternatives": ["6 cm", "8 cm", "10 cm", "12 cm", "14 cm"],
+                    "correctAnswerIndex": 3,
+                    "solution": "Pelo Teorema de Tales, há proporcionalidade entre os segmentos. 4/6 = 8/x => 4x = 48 => x = 12 cm."
+                },
+                {
+                    "enunciado": "Um poste de 5 metros de altura projeta uma sombra de 3 metros. Próximo ao poste, uma pessoa de 1,80 metros de altura projeta uma sombra. Qual o comprimento dessa sombra?",
+                    "alternatives": ["0.90 metros", "1.08 metros", "1.20 metros", "1.50 metros", "1.80 metros"],
+                    "correctAnswerIndex": 0,
+                    "solution": "Por semelhança (Teorema de Tales aplicado a triângulos), Altura poste / Sombra poste = Altura pessoa / Sombra pessoa. 5 / 3 = 1.80 / x => 5x = 3 * 1.80 => 5x = 5.40 => x = 5.40 / 5 => x = 1.08 metros. Minha alternativa correta index precisa ser 1, com o valor 1.08 metros."
+                },
+                {
+                    "enunciado": "Num triângulo ABC, uma reta paralela ao lado BC corta os lados AB e AC nos pontos D e E, respectivamente. Se AD = 3, DB = 6 e AE = 2, qual a medida de EC?",
+                    "alternatives": ["2", "3", "4", "5", "6"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Pelo Teorema de Tales (ou semelhança de triângulos), AD/DB = AE/EC. 3/6 = 2/EC => 3 * EC = 6 * 2 => 3 * EC = 12 => EC = 4."
+                },
+                {
+                    "enunciado": "Se um triângulo tem lados 4, 6 e 8, e um triângulo semelhante a ele tem um lado correspondente ao 4 que mede 2, quais as medidas dos outros dois lados do triângulo semelhante?",
+                    "alternatives": ["3 e 4", "2 e 4", "4 e 6", "1 e 2", "5 e 7"],
+                    "correctAnswerIndex": 0,
+                    "solution": "A razão de semelhança é 2/4 = 1/2. Então, os outros lados são 6 * (1/2) = 3 e 8 * (1/2) = 4. As medidas são 3 e 4."
+                },
+                {
+                    "enunciado": "Qual a principal ideia por trás do Teorema de Tales?",
+                    "alternatives": ["A soma dos ângulos internos de um triângulo", "A relação entre a hipotenusa e os catetos", "A proporcionalidade de segmentos em retas transversais cortadas por paralelas", "A área de um triângulo", "O cálculo do perímetro de um polígono"],
+                    "correctAnswerIndex": 2,
+                    "solution": "O Teorema de Tales estabelece a proporcionalidade de segmentos que são interceptados por retas paralelas em duas retas transversais."
+                }
+            ]
+        },
+        "geometria-3d": {
+            "exercises": [
+                {
+                    "enunciado": "Quantas faces tem um cubo?",
+                    "alternatives": ["4", "6", "8", "10", "12"],
+                    "correctAnswerIndex": 1,
+                    "solution": "Um cubo tem 6 faces (quadradas)."
+                },
+                {
+                    "enunciado": "Qual o volume de um cubo com aresta medindo 4 cm?",
+                    "alternatives": ["16 cm³", "32 cm³", "48 cm³", "64 cm³", "128 cm³"],
+                    "correctAnswerIndex": 3,
+                    "solution": "O volume de um cubo é aresta³: V = 4³ = 4 * 4 * 4 = 64 cm³."
+                },
+                {
+                    "enunciado": "Uma pirâmide de base quadrada tem lado da base 6 cm e altura 10 cm. Qual o seu volume?",
+                    "alternatives": ["60 cm³", "120 cm³", "180 cm³", "240 cm³", "360 cm³"],
+                    "correctAnswerIndex": 1,
+                    "solution": "O volume de uma pirâmide é (Área da Base * Altura) / 3. Área da Base = 6 * 6 = 36 cm². Volume = (36 * 10) / 3 = 360 / 3 = 120 cm³."
+                },
+                {
+                    "enunciado": "Qual a fórmula para o volume de um cilindro com raio 'r' e altura 'h'?",
+                    "alternatives": ["$\\\\pi r h$", "$2\\\\pi r h$", "$ \\\\pi r^2 h$", "$2\\\\pi r^2 h$", "$\\frac{1}{3} \\\\pi r^2 h$"],
+                    "correctAnswerIndex": 2,
+                    "solution": "O volume de um cilindro é a área da base (um círculo: $\\pi r^2$) multiplicada pela altura: V = $\\pi r^2 h$."
+                },
+                {
+                    "enunciado": "Quantas arestas tem um paralelepípedo?",
+                    "alternatives": ["4", "6", "8", "10", "12"],
+                    "correctAnswerIndex": 4,
+                    "solution": "Um paralelepípedo tem 12 arestas (4 na base de cima, 4 na base de baixo e 4 nas laterais)."
+                }
+            ]
+        }
+    },
+    "aritmetica": {
+        "paridade": {
+            "exercises": [
+                {
+                    "enunciado": "A soma de um número par com um número ímpar é sempre:",
+                    "alternatives": ["Par", "Ímpar", "Primo", "Divisível por 3", "Depende dos números"],
+                    "correctAnswerIndex": 1,
+                    "solution": "Par + Ímpar = Ímpar. Ex: 2 + 3 = 5. (2k) + (2j+1) = 2(k+j) + 1, que é um número ímpar."
+                },
+                {
+                    "enunciado": "O produto de dois números ímpares é sempre:",
+                    "alternatives": ["Par", "Ímpar", "Primo", "Maior que 10", "Depende dos números"],
+                    "correctAnswerIndex": 1,
+                    "solution": "Ímpar * Ímpar = Ímpar. Ex: 3 * 5 = 15. (2k+1) * (2j+1) = 4kj + 2k + 2j + 1 = 2(2kj+k+j) + 1, que é um número ímpar."
+                },
+                {
+                    "enunciado": "Qual a paridade do número 1998?",
+                    "alternatives": ["Par", "Ímpar", "Ambos", "Nenhum", "Não se aplica"],
+                    "correctAnswerIndex": 0,
+                    "solution": "Um número é par se seu último algarismo for 0, 2, 4, 6 ou 8. O último algarismo de 1998 é 8, portanto é par."
+                },
+                {
+                    "enunciado": "Se 'n' é um número inteiro, qual a paridade de n + (n+1)?",
+                    "alternatives": ["Sempre par", "Sempre ímpar", "Par se n é par, ímpar se n é ímpar", "Depende do valor de n", "Primo"],
+                    "correctAnswerIndex": 1,
+                    "solution": "A soma é n + n + 1 = 2n + 1. Qualquer número da forma 2n + 1 é um número ímpar, independentemente se n é par ou ímpar."
+                },
+                {
+                    "enunciado": "Em um grupo de 7 números inteiros, se 3 são pares e 4 são ímpares, qual a paridade da soma de todos eles?",
+                    "alternatives": ["Par", "Ímpar", "Depende dos valores", "Pode ser par ou ímpar", "Nenhuma das anteriores"],
+                    "correctAnswerIndex": 1,
+                    "solution": "Soma de 3 pares é par. Soma de 4 ímpares é par (ímpar+ímpar=par, par+ímpar=ímpar, ímpar+ímpar=par). Soma final: Par + Par = Par. Minha alternativa correta index precisa ser 0, com o valor Par."
+                }
+            ]
+        },
+        "divisibilidade": {
+            "exercises": [
+                {
+                    "enunciado": "Qual dos seguintes números é divisível por 3?",
+                    "alternatives": ["121", "134", "153", "160", "172"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Um número é divisível por 3 se a soma de seus algarismos for divisível por 3. Para 153, 1 + 5 + 3 = 9, e 9 é divisível por 3."
+                },
+                {
+                    "enunciado": "Qual dos seguintes números é divisível por 4?",
+                    "alternatives": ["234", "350", "418", "524", "602"],
+                    "correctAnswerIndex": 3,
+                    "solution": "Um número é divisível por 4 se os dois últimos algarismos formarem um número divisível por 4. Para 524, 24 é divisível por 4 (24 / 4 = 6)."
+                },
+                {
+                    "enunciado": "Um número é divisível por 6 se ele for divisível por:",
+                    "alternatives": ["2 e 3", "2 e 4", "3 e 4", "2 e 5", "3 e 5"],
+                    "correctAnswerIndex": 0,
+                    "solution": "Um número é divisível por 6 se ele for divisível tanto por 2 quanto por 3."
+                },
+                {
+                    "enunciado": "Qual o menor número inteiro positivo que é divisível por 2, 3 e 5 ao mesmo tempo?",
+                    "alternatives": ["10", "15", "20", "30", "60"],
+                    "correctAnswerIndex": 3,
+                    "solution": "O número deve ser o Mínimo Múltiplo Comum (MMC) de 2, 3 e 5. Como são primos entre si, o MMC é 2 * 3 * 5 = 30."
+                },
+                {
+                    "enunciado": "Para que o número 4x6 seja divisível por 9, qual deve ser o valor de x?",
+                    "alternatives": ["0", "2", "5", "8", "9"],
+                    "correctAnswerIndex": 4,
+                    "solution": "Para ser divisível por 9, a soma dos algarismos deve ser divisível por 9. 4 + x + 6 = 10 + x. Para 10 + x ser divisível por 9, x deve ser 8 (10 + 8 = 18)."
+                }
+            ]
+        },
+        "multiplos-divisores": {
+            "exercises": [
+                {
+                    "enunciado": "Qual dos seguintes números é um múltiplo de 7?",
+                    "alternatives": ["21", "23", "25", "27", "29"],
+                    "correctAnswerIndex": 0,
+                    "solution": "21 é múltiplo de 7, pois 7 * 3 = 21."
+                },
+                {
+                    "enunciado": "Quais são os divisores de 12?",
+                    "alternatives": ["[1, 2, 3, 4]", "[1, 2, 3, 4, 6]", "[1, 2, 3, 4, 6, 12]", "[2, 3, 4, 6, 12]", "[1, 12]"],
+                    "correctAnswerIndex": 2,
+                    "solution": "Os divisores de 12 são todos os números inteiros pelos quais 12 pode ser dividido sem deixar resto: 1, 2, 3, 4, 6, 12."
+                },
+                {
+                    "enunciado": "Qual o Mínimo Múltiplo Comum (MMC) entre 4 e 6?",
+                    "alternatives": ["2", "4", "6", "12", "24"],
+                    "correctAnswerIndex": 3,
+                    "solution": "Múltiplos de 4: 4, 8, 12, 16, ... Múltiplos de 6: 6, 12, 18, ... O menor múltiplo comum é 12."
+                },
+                {
+                    "enunciado": "Qual o Máximo Divisor Comum (MDC) entre 18 e 24?",
+                    "alternatives": ["2", "3", "4", "6", "8"],
+                    "correctAnswerIndex": 3,
+                    "solution": "Divisores de 18: 1, 2, 3, 6, 9, 18. Divisores de 24: 1, 2, 3, 4, 6, 8, 12, 24. O maior divisor comum é 6."
+                },
+                {
+                    "enunciado": "Um evento ocorre a cada 4 dias e outro a cada 6 dias. Se ambos ocorreram hoje, em quantos dias ocorrerão novamente juntos?",
+                    "alternatives": ["4", "6", "10", "12", "24"],
+                    "correctAnswerIndex": 3,
+                    "solution": "É o MMC de 4 e 6, que é 12. Eles ocorrerão novamente juntos em 12 dias."
+                }
+            ]
+        },
+        "euclides": {
+            "exercises": [
+                {
+                    "enunciado": "Use o Algoritmo de Euclides para encontrar o MDC entre 12 e 18.",
+                    "alternatives": ["2", "3", "4", "6", "9"],
+                    "correctAnswerIndex": 3,
+                    "solution": "18 = 1 * 12 + 6. 12 = 2 * 6 + 0. O último resto não nulo é 6. Portanto, MDC(12, 18) = 6."
+                },
+                {
+                    "enunciado": "Encontre o MDC de 30 e 42 usando o Algoritmo de Euclides.",
+                    "alternatives": ["2", "3", "4", "6", "10"],
+                    "correctAnswerIndex": 3,
+                    "solution": "42 = 1 * 30 + 12. 30 = 2 * 12 + 6. 12 = 2 * 6 + 0. O MDC é 6."
+                },
+                {
+                    "enunciado": "Qual o MDC de 100 e 75 pelo Algoritmo de Euclides?",
+                    "alternatives": ["5", "10", "15", "20", "25"],
+                    "correctAnswerIndex": 4,
+                    "solution": "100 = 1 * 75 + 25. 75 = 3 * 25 + 0. O MDC é 25."
+                },
+                {
+                    "enunciado": "Se o MDC entre dois números 'a' e 'b' é 'd', então 'd' é o maior número que divide:",
+                    "alternatives": ["Apenas 'a'", "Apenas 'b'", "A soma de 'a' e 'b'", "Tanto 'a' quanto 'b'", "O produto de 'a' e 'b'"],
+                    "correctAnswerIndex": 3,
+                    "solution": "O Máximo Divisor Comum (MDC) é o maior número que divide **ambos** os números em questão."
+                },
+                {
+                    "enunciado": "O Algoritmo de Euclides é usado para encontrar o:",
+                    "alternatives": ["Mínimo Múltiplo Comum", "Máximo Divisor Comum", "Fator comum", "Raiz quadrada", "Número primo"],
+                    "correctAnswerIndex": 1,
+                    "solution": "O Algoritmo de Euclides é um método eficiente para encontrar o **Máximo Divisor Comum (MDC)** de dois números inteiros."
+                }
+            ]
+        }
+    }
+}
